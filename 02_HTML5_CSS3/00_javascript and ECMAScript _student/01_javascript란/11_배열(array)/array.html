@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Math.속성 또는 메소드</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="article">
+        <h2>JavaScript 배열</h2>
+	</div>
+   <pre>
+  &lt;script type=&quot;text/javascript&quot;&gt;
+<span class="green"></span> //&lt;![CDATA[
+        document.write(&quot;&lt;h3&gt;문자치환&lt;/h3&gt;&quot;);
+        var theText1=&quot;img2_out.jpg&quot;;
+        theText1=theText1.replace(&quot;out&quot;,&quot;over&quot;);
+        document.write(theText1+&quot;&lt;br /&gt;&quot;);
+
+        document.write(&quot;&lt;h3&gt;문자추출&lt;/h3&gt;&quot;);
+        var theText2=&quot;img/img10.jpg&quot;;
+        theText2=theText2.split(&quot;/&quot;)[1];<span class="green">//데이터들이 인덱스공간을 각각 저장해서 /앞에는 0번 / 뒤는 1번 img10.jpg</span>
+        theText2=theText2.substring(3);<span class="green">//3번 인덱스부터 끝까지 10.jpg</span>
+        theText2=theText2.parseInt(theText2);<span class="green">//정수만 남기니깐 10</span>
+        document.write(theText2+&quot;&lt;br /&gt;&quot;);
+
+        document.write(&quot;&lt;h3&gt;마지막 문자 추출&lt;/h3&gt;&quot;);
+        var theText3=&quot;hello javascript&quot;;
+        var lastIndex=theText3.length-1;
+        theText3=theText3.charAt(lastIndex);
+        document.write(theText3+&quot;&lt;br /&gt;&quot;);
+
+        document.write(&quot;&lt;h3&gt;특정 문자 포함여부&lt;/h3&gt;&quot;);
+        var theText4=&quot;tel phone now home&quot;;
+        var findIndex=theText4.indexOf('mobile');<span class="green">//indexOf 메서드는 찾는 문자가 없을 시 -1이란 값을 반환</span>
+        if(findIndex&lt;0){
+             document.write(&quot;찾는 문자가 없습니다.&quot;);
+        }else{
+        document.write(&quot;텍스트에 찾는 문자가 포함 되어있습니다.&quot;);
+        }
+ //]]&gt;
+<span class="green"></span>&lt;/script&gt;  </pre>
+<p>&nbsp;</p>
+<h3>Array(배열) 객체</h3>
+<p>하나의 변수에 여러 개의 데이터를 저장할수 있으며 각 공간마다 인덱스(Index) 번호가 존재한다.</p>
+<p>new 연산자ㅏ를 사용한 배열 객체 생성법</p>
+<p>var 변수(인스턴스 네임) =&nbsp;new Array();</p>
+<p>var 변수(인스턴스 네임) =&nbsp;new Array()5;<span class="green">//데이터를 5개만 저장할 수있도록 저장 공간을 두겠다는 뜻</span></p>
+<p>편리한 방법</p>
+<p>var 변수(인스턴스 네임) =&nbsp;[값1, 값2, 값3, 값4, 값5];</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+<span class="green"></span> //&lt;![CDATA[
+<span class="green">//특정 인덱스에 저장된 데이터 출력</span>
+   var name =&nbsp;new Array();
+   name[0] =&nbsp;&quot;조지현&quot;;
+   name[1] =&nbsp;&quot;조지영&quot;;
+   name[2] =&nbsp;&quot;조원식&quot;;
+   name[3] =&nbsp;&quot;박연자&quot;;
+   name[4] =&nbsp;&quot;석옥출&quot;;
+  document.write(name[3]+&quot;&lt;br /&gt;&quot;);
+
+<span class="green">//오늘의 요일 알아보기</span>
+   var days =&nbsp;new Array(&quot;일&quot;,&quot;월&quot;,&quot;화&quot;,&quot;수&quot;,&quot;목&quot;,&quot;금&quot;,&quot;토&quot;);
+   today=now Date();
+   var yoil=days[today.getDay()];//오늘의 요일에 해당하는 값을 반환 일:0~ 토:6
+   document.write(yoil+&quot;요일 &lt;br /&gt;&quot;);
+
+<span class="green">//전체 재산의 합 구하기</span>
+   var money=[100,100,200,50]
+   var theLen=money.length;
+   var total=0;
+   for(var i=0; i&lt;theLen; i++){
+      total=total+money[i];
+   }
+   document.write(total);
+ //]]&gt;
+<span class="green"></span>&lt;/script&gt;</pre>
+<h3>배열 메서드</h3>
+<p>reverse()&nbsp; &nbsp;배열 데이터를 역순으로 반환</p>
+<p> slice(1,2)&nbsp; &nbsp;인덱스 번호 1부터 시작하여 2직전의 데이터까지 잘라서 저장</p>
+<p>sort()&nbsp; &nbsp; 배열 데이터를 알파벳 혹은 0/1/2...의 오름차순으로 정렬&nbsp;</p>
+<p> &nbsp;join(&quot;구분자&quot;)&nbsp; &nbsp;&nbsp;배열 데이터를 구분자로 연결하여 결합&nbsp; &nbsp; </p>
+<p>concat()&nbsp; &nbsp; 여러 개의 배열 데이터들을 하나로 결합</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+<span class="green"></span> //&lt;![CDATA[
+    <span class="green">//배열 데이터 역순 정렬</span>
+    var theFood=[&quot;짬뽕&quot;,&quot;냉면&quot;,&quot;갈비탕&quot;,&quot;돈까스&quot;,&quot;삼겹살&quot;];
+    theFood.reverse();
+    console.log(theFood);
+
+    <span class="green">//배열 데이터 오름차순 정렬</span>
+    var theSubway=[&quot;2호선&quot;,&quot;9호선&quot;,&quot;7호선&quot;,&quot;4호선&quot;,&quot;3호선&quot;];
+    theSubway.sort();
+    console.log(theSubway);
+
+   <span class="green"> //배열 데이터를 결합</span>
+    var Mountain1=[&quot;남산&quot;,&quot;도봉산&quot;,&quot;관악산&quot;,&quot;청계산&quot;,&quot;북한산&quot;];
+    var Mountain2=[&quot;설악산&quot;,&quot;지리산&quot;,&quot;한라산&quot;,&quot;속리산&quot;];
+    var joinResult=Mountain1.concat(Mountain2);
+    console.log(joinResult);
+
+   <span class="green"> //원하는 데이터만 선택</span>
+    var theName=[&quot;장준호&quot;,&quot;윤세정&quot;,&quot;홍우현&quot;,&quot;오윤석&quot;,&quot;박경훈&quot;];
+    var result=theName.slice(2,4);
+    console.log(result);
+
+    <span class="green">//구분자 기준으로 데이터를 합칩니다.</span>
+    var theProduct=[&quot;냉장고&quot;,&quot;컴퓨터&quot;,&quot;선풍기&quot;,&quot;밥솥&quot;,&quot;핸드폰&quot;];
+    var joinResult=theProduct.join(&quot;-&quot;);
+    console.log(joinResult);
+ //]]&gt;
+<span class="green"></span>&lt;/script&gt;</pre>
+<h3>배열 데이터 추가/삭제 메서드</h3>
+<p>shift()&nbsp; &nbsp;배열에서 첫 인덱ㅅ(0)에 저장된 데이터를 삭제</p>
+<p> pop()&nbsp; &nbsp;배열에서 마지막 인덱스에 저장된 데이터를 삭제</p>
+<p>unshift(값)&nbsp; &nbsp; 배열에서 첫 인덱스(0)에 새 데이터를 중첩하여 추가</p>
+<p> push(값)&nbsp; &nbsp;&nbsp;배열에서 마지막 인덱스에 새 데이터를 중첩하여 추가&nbsp; </p>
+<p>concat()&nbsp; &nbsp; 여러 개의 배열 데이터들을 하나로 결합</p>
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+<span class="green"></span> //&lt;![CDATA[
+    var theSubway=[&quot;2호선&quot;,&quot;9호선&quot;,&quot;7호선&quot;,&quot;4호선&quot;,&quot;3호선&quot;];
+    var newLine1=&quot;1호선&quot;;
+    var newLine2=&quot;분당선&quot;;
+
+    theSubway.shift();  //맨 앞(0번 인덱스)의 데이터 삭제
+    console.log(theSubway);
+    theSubway.unshift(newLine1);  <span class="green">//맨 앞(0번 인덱스)의 데이터 추가(변경)</span>
+    console.log(theSubway);
+
+    theSubway.pop();  <span class="green">//마지막(4번 인덱스)의 데이터 삭제</span>
+    console.log(theSubway);
+    theSubway.push(newLine2);  <span class="green">//마지막(4번 인덱스)의 데이터 추가(변경)</span>
+    console.log(theSubway);
+ //]]&gt;
+<span class="green"></span>&lt;/script&gt;</pre>
+<p></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</body>
+</html>

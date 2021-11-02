@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>align-content</title>
+    <style>
+        .container{width:90%; height:500px; margin:20px auto; border:5px solid red; display:flex; flex-wrap: wrap; align-content:center;}
+        /* align-content:안에있는 내용들 */
+        /* align-content:space-around 위 아래 비용을 맞춰서 정렬 */
+        /* align-content:space-between 양끝 붙여서 위아래 정렬 */
+        /* align-content:center 가운데 정렬 */
+        .container>div{width:100%; height:100px;}
+        .container>div:nth-child(1){background-color: brown;}
+        .container>div:nth-child(2){background-color: burlywood;}
+        .container>div:nth-child(3){background-color: chartreuse;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>box1</div>
+        <div>box2</div>
+        <div>box3</div>
+    </div>
+</body>
+</html>

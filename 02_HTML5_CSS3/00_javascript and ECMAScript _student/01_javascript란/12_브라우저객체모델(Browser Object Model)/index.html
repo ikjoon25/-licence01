@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>브라우저 객체</title>
+</head>
+<body>
+	<h1>브라우저 객체란? (BOM, Browser Obejec Model)</h1>
+	<p>브라우저에 내장된 객체를 '브라우저 객체'라고 한다. <br/> window는 브라우저 객체의 최상위 객체이며 window 객체에는 하위 객체가 포함되어 있다.</p>
+	
+	<h2>open() 메서드<h2>
+	<p>open("URL", "새창 이름", "새창 옵션")</p>
+	<script type="text/javascript">
+		window.open("http://www.daum.net","daum","width=350, height=400, left=50, top=10, scrollbars=no");
+	</script>
+	
+	<h2>alert()</h2>
+	<p>alert("경고 메세지");</p>
+	<script type="text/javascript">
+		alert("잘못 입력하셨습니다.");
+	</script>
+	
+	<h2>prompt()</h2>
+	<p>prompt("질의 내용","기본답변");</p>
+	<script type="text/javascript">
+		prompt("당신의 연령은?","0");
+	</script>
+	
+	<h2>confirm()</h2>
+	<p>confirm("질의내용"); - 확인/취소</p>
+	<script type="text/javascript">
+		confirm("정말로 삭제하시겠습니까?");
+	</script>
+	
+	/*
+	생략
+	<h1>screen 객체</h1>
+	<p>screen.속성  - 사용자의 모니터 정보(속성)을 제공하는 객체 - 너비 높이 컬러</p>
+	
+	<h1>location 객체</h1>
+	<p>location.속성; location.메서드()  -사용자 브라우저와 관련된 속성과 메서드</p>
+	<script type="text/javascript">
+		location.href(http://www.naver.com);
+	</script>
+	*/
+</body>
+</html>

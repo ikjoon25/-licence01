@@ -1,0 +1,89 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+h2{}
+h3{display:inline;}
+
+#wrap{
+    width:800px;
+    height:auto;
+    margin:100px auto;
+    
+}
+#header{
+    width:100%;
+    height:150px;
+    background:rgb(245, 169, 4) url(../images/nav2.png) no-repeat right;
+}
+#header nav{
+    float:left;
+    margin-top:50px;
+    width:70%;
+    background-color: green;
+    padding-left:50px;
+}
+
+#header nav ul li{
+    list-style: none;
+    display:inline;
+    margin:0 15px;
+    font-weight:bold;
+}
+#header nav ul li a{
+    text-decoration:none;
+    color:black;   
+}
+
+#section{
+    width:580px;
+    float:left;
+    margin:5px;
+}
+#section article{
+    width:250px;
+    height:200px;
+    padding:10px;
+    float:left;
+    border:2px solid  #ccc;
+    overflow-y:scroll;
+}
+#section article input[type="checkbox"]:checked ~div.check{height:0;}
+#section article .check{height:200px; width:230px; transition:1s; overflow:hidden;}
+
+#section article.at1,#section article.at2,#section article.at3,#section article.at4{
+    transition-property:background-color, border;
+    transition-duration: 2s;
+}
+
+#section article.at1:hover{
+    background-color: greenyellow;
+    border:2px solid green;
+}
+#section article.at2:hover{background-color: greenyellow;
+    border:2px solid green;}
+#section article.at3:hover{background-color: greenyellow;
+    border:2px solid green;}
+#section article.at4:hover{background-color: greenyellow;
+    border:2px solid green;}
+
+#aside{
+    width:200px;
+    float:right;
+    background-color:hotpink;
+    margin-top:30px;
+    border:2px solid black;
+}
+#aside img{
+    display:block;
+    margin:0 auto;
+}
+
+#footer{
+    width:100%;
+    clear:both;
+    background-color: hotpink;
+    
+}
+#footer p{
+    padding:20px;
+    text-align: center;
+}

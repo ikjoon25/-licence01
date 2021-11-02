@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin:100px; font-size:20px;}
+        #div1{color:rgb(208, 255, 0)}
+        #div2{color:red}
+        #div3{color:rgb(55, 0, 255)}
+        #div4{color:rgb(255, 0, 179)}
+    </style>
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script>
+        $(function(){
+            var el=$('#div1').text('text메소드에서 내용 바꿔쓰기');
+            var el1=$('#div2').html('text메소드에서 내용 바꿔쓰기');
+            $('#div3').text('<strong>text메소드</strong> 에서 내용 바꿔쓰기')
+            $('#div4').html('<strong>text메소드</strong> 에서 내용 바꿔쓰기')
+            console.log(el1)
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">안에 들어있는 텍스트</div>
+    <div id="div2">안에 들어있는 텍스트</div>
+    <div id="div3">안에 들어있는 텍스트</div>
+    <div id="div4">안에 들어있는 텍스트</div>
+</body>
+</html>

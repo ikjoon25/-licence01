@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title> 글자와 관련된 속성 알아보기 </title>
+		<meta charset="UTF-8" />
+		<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Style+Script&display=swap');@import url('https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap');
+			#box1 h2{font-family: 'Nanum Gothic', sans-serif; font-family: 'Style Script', cursive;}
+			#box1 p{font-family: 'Style Script', cursive; color:green; font-weight: 800;}
+			#box2 h2{font-family: 'MonteCarlo', cursive;}
+			#box2 h2::first-letter{color:red}
+			#box2 p{font-style:italic}
+			#box2 p{font-variant: small-caps; color: red;}
+			#box3 h2{font:3em Arial;}
+			#box3 p{font:small-caps italic 30px "Times New Romas"}
+		</style>
+	</head>
+
+	<body>
+		<div id="box1">
+			<h2>font-family, font-size, font-weight</h2>
+			<p>Well done is better than well said.</p>
+		</div>
+		<div id="box2">
+			<h2>font-style, font-variant 작은대문자, color</h2>
+			<p>Seeing much, suffering much, and studying much, are the three pillars of learning. </p>
+		</div>
+		<div id="box3">
+			<h2>font</h2>
+			<p>Education is a progressive discovery of our own ignorance. </p>
+		</div>
+	</body>
+</html>

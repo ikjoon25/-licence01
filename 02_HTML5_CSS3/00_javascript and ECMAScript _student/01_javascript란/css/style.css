@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body { margin: 0; color: #000000; font: 14px/normal "Malgun Gothic", "맑은 고딕", DotumChe, Dotum, "돋움", Gulim, "굴림", Verdana, Arial, "Trebuchet MS"; margin: 0px; font-size-adjust: none; font-stretch: normal;}
+a:link { color: rgb(0,125,255); text-decoration: none; font-weight: bold;}
+a:hover { color: rgb(255,0,0); text-decoration: none; font-weight: bold;}
+a:visited { color: rgb(0,190,190); text-decoration: none; font-weight: bold;}
+a:active { color: rgb(255,125,0); text-decoration: none; font-weight: bold;}
+
+#wrap { width: 900px; margin: auto;}
+.article { width: 900px; color: #333333;	line-height: 180%;	text-align: left;}
+.article h2 { background: #D0D7DF; border-bottom: 1px solid #C8CACE; border-top: 1px solid #C8CACE; font: 18px/1.6; font-weight: bold; margin: 25px 0px 25px 0px; padding: 10px 49px 10px 50px;}
+h3 { color: #009;}
+pre { margin: 10px 0px; padding: 0px; border: 1px solid rgb(200, 202, 206);  width: 898px; overflow-x: auto; overflow-y: hidden; font-size-adjust: none;  font-stretch: normal; font-family: "돋움체"; font-size: 14px; line-height: 180%; font-weight: normal;}
+.box { margin: 10px 0px; padding: 10px; border: 1px solid rgb(200, 202, 206); background-color: rgb(247, 247, 247);}
+
+.clearfix { width: 900px; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; background-color: rgb(34, 34, 34);}
+.clearfix:after{ content: ""; display: block; clear: both;}
+* html .clearfix {	height: 1%;}
+* + html .clearfix { display: inline-block;}
+
+.underline { text-decoration: line-through;}
+.blue { color: #000099; font-weight: bold;}
+.green { color: #008800;}
+.red { color: #cc0000; font-weight: bold;}
+.gray { color: #888888;}

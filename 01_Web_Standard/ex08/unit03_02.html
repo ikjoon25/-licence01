@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+	<head>
+		<title>목록 요소를 가로로 배치하기</title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			body { 
+				margin:50px 0px;
+				}
+			a {
+				font:1.5em "Times New Roman",Georgia,Serif;
+				color:#fff;
+				text-decoration:none;
+				}
+			a:hover {
+				color:#ff3;
+				}
+			/* ul, li Layout */			
+			/* #topMenu{background-color:darkred;  }
+			ul{list-style: none; text-align: center; }
+			li{display: inline;}
+			#topMenu li{list-style: none;}
+			#topMenu li:after{content:"          "; white-space: pre;} */
+			#topMenu{background-color: red; text-align: center;}
+			#topMenu li{display: inline-block; list-style: none; padding:50px 20px;}
+			
+			#topMenu1{width:500px; list-style: none; overflow: hidden; margin:0 auto; }
+			#topMenu1 li{float:left; padding:0 20px;}
+			div{background-color: darkturquoise; margin-top:20px; padding:10px;}
+		</style>
+	</head>
+
+	<body>
+		<ul id="topMenu">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Sitemap</a></li>
+			<li><a href="#">BBS</a></li>
+			<li><a href="#">Help</a></li>
+		</ul>
+
+		<div>
+			<ul id="topMenu1">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Sitemap</a></li>
+				<li><a href="#">BBS</a></li>
+				<li><a href="#">Help</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

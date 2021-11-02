@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+    $(function(){
+            var base=100;
+            var mybody=$('body');
+            $('#zoom a').on('click', function(){
+                var zNum=$('#zoom a').index(this);
+                if(zNum==0){
+                    base += 10; //110=100+10
+                }else if(zNum==1){
+                    base=100;
+                }else{
+                    base -= 10; 
+                }
+
+                mybody.css({'overflow-y':'auto', 'transform-origin':'50% 0', 'transform':'scale('+ base/100 +')', 'zoom':base+'%'});
+                return false;
+            });
+        });
+    </script>
+    <style>
+        ul{overflow: hidden; margin-left:1000px;}
+        li{float:left; list-style: none;}
+        .container{width:1280px; margin:0 auto;}
+        #content img{display:block; margin: 0 auto;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <ul id="zoom">
+                <li><img src="./util_zoom_1.gif" alt=""></li>
+                <li><a href="#"><img src="./util_zoom_2.gif" alt=""></a></li>
+                <li><a href="#"><img src="./util_zoom_3.gif" alt=""></a></li>
+                <li><a href="#"><img src="./util_zoom_4.gif" alt=""></a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <img src="./aa.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

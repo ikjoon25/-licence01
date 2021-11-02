@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+.fl{float:left;}
+
+#header{
+    width:100%;
+    height:94px;
+    background-color: #fff;
+    position:relative;
+    top:0;
+    left:0;
+    box-shadow: 0 2px 2px #c9c9c9;
+}
+/* 클리어픽스를 사용할때는 헤더값에 높이값이 정해지진않고 아래 자식이 플롯레프트가 들어올때 사용한다 */
+.nav{
+    width:1400px;
+    margin:0 auto;
+    
+    height:100%;
+    
+}
+.nav>li.freesamLogo{
+    margin-left:0;
+}
+.nav>li.freesamLogo>a{
+    padding:0;
+}
+.nav>li{
+    margin:0 30px;
+}
+.nav>li>a{
+    display:block;
+    color:#333;
+    font-size:1.2em;
+    font-weight:bold;
+    padding:37px 16px;
+    box-sizing: border-box;
+    
+}
+/* a는인라인요소이기떄문에 디스플레이블럭을줘서 패딩값을준다 노인들을위하여 */
+
+.nav>li:hover>a{color:#e95a65}
+
+.nav>li>.width100{
+    position:absolute;
+    top:93px;
+    left:0;
+    width:100%;
+    background-color: #efefef;
+    box-shadow: 0 2px 2px #c9c9c9;
+    padding:20px 0;
+    display:none;
+}
+
+.nav>li:hover>.width100{display:block;}
+
+.nav>li>.width100>ul{
+   width:1400px;
+   margin:0 auto;
+}
+.nav>li>.width100>ul>li{
+    width:200px;
+    padding-left:20px;
+    border-left:1px solid #c9c9c9;
+}
+
+.nav>li>.width100>ul>li:first-child{
+    border-left:none;
+}
+
+.nav>li>.width100>ul>li>h2{
+    text-align: center;
+    font-size:1.5em;
+    color:#e95a65;
+    padding-top:5px;
+}
+.nav>li>.width100>ul>li>h2>img{
+    display:block;
+    margin:20px auto;
+}
+
+.nav>li>.width100>ul>li>h3>a{
+    color:#097a84;
+    font-size: 1em;
+    margin-bottom:3px;
+    line-height: 200%;
+}
+
+.nav>li>.width100>ul>li>dl>dt>a{color:#333; line-height: 180%;}
+.nav>li>.width100>ul>li>h2>dl>dd{}
+{
+    color:#777;
+    font-size:0.8em;
+    font-weight: bold;
+    line-height:170%;
+    background: url(../images/blet.png) no-repeat 0 center;
+    padding-left:10px;
+}

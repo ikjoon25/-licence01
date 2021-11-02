@@ -1,0 +1,26 @@
+*{margin:0; padding:0;}
+#wrap{width:1280px; margin:0 auto; padding:200px; height: 390px;}
+
+#wrap>div{float:left; width:280px; height:390px; overflow: hidden; border:2px solid rgb(17,127,170); margin-right:20px; position: relative;}
+
+#wrapper1 ul{position:relative;  width:100%; height:100%}
+#wrapper1 ul li{position:absolute; top:100%; width:100%; height:100%}
+#wrapper1 ul li:first-child{top:-100px;}
+
+
+/* 2번째  슬라이드*/
+
+#wrapper2 ul{position:relative;  width:100%; height:100%}
+#wrapper2 ul li{position:absolute; top:-100%; width:100%; height:100%}
+#wrapper2 ul li:first-child{top:0px;}
+
+/* 3번쨰 슬라이드 */
+
+#wrapper3 ul{position:relative;  width:100%; height:100%}
+#wrapper3 ul li{position:absolute; left:-100%; width:100%; height:100%}
+#wrapper3 ul li:first-child{left:0px;}
+
+/* 4번째 슬라이드 */
+#wrapper4 ul{position:relative;  width:100%; height:100%}
+#wrapper4 ul li{position:absolute; right:100%; width:100%; height:100%}
+#wrapper4 ul li:first-child{right:0px;}

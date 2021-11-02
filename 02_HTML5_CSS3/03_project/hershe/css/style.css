@@ -1,0 +1,87 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+body{font-family:'Nanum Gothic', sans-serif;}
+.line{width:100%; border-bottom: 2px solid #000; position: absolute; top:87px; left:0;}
+/* 레이아웃 */
+#wrap{width:100%;}
+#header{width:100%; height:176px; }
+#banner{width: 100%; height:554px; background: blueviolet;}
+#contents{width: 100%; height:auto; background: chartreuse; padding-bottom: 60px;}
+#footer{width:100%; height:1000px; background: #1e1e1e;}
+
+/* 공통속성 */
+.container{width:1350px; height:inherit; background: rgba(255,255,255,.3); margin:0 auto; position:relative;}
+/* height:inherit 부모 높이값 상속 받으라는 뜻 */
+.row{padding:0 7px; box-sizing:border-box;}
+
+
+/* 레이아웃 짜고  logo 내용 넣어주기 그리고 컨테이너한테 포지션 렐라티브 주고 logo에 포지션 엡솔루트 넓이 높이 백그라운드 이미지 넣어주기 */
+/* 헤더영역 */
+.logo{position:absolute; width:169px; height:176px; background: url(../img/logo.jpg) no-repeat; top:0; left:0;}
+.header-top{height:88px; width:100%;}
+.header-top h2{width:330px; height:39px; float:left; background:url(../img/slogan.jpg) no-repeat; margin:30px 0 0 180px;}
+/* 넓이 높이 float:left 하고 마진값으로 위치 잡아주기 */
+
+
+.header-top form{float:left; margin:30px 0 0 20px;}
+.header-top form .guideText{border:1px solid #bbb; width:200px; height:35px; padding:0 10px; float:left;}
+.header-top form .search-img{display:block; float:left;}
+.header-top .gnb{float:right;}
+.header-top .gnb li{float:left; padding:5px 0 0 10px;}
+/* 이미지 자리 잡아주기 */
+
+
+.header-top .gnb li a{}
+.header-top .gnb li a img{}
+.menu{height:88px; width:100%; background:yellow; width:}
+.menu>ul{float:right; width:1178px;}
+.menu>ul>li{float:left; position:relative;}
+.menu>ul>li>a{display:block; color:#444; padding:35px 23.7px 34px 23.7px; font-weight: bold;}
+/* -투뎁스시작 */
+.menu>ul>li>.drop{display:none; position:absolute; width:379px; height:auto; background-repeat: no-repeat; background-position: right top; background-size:209px 100%;}
+/* ul에 float:right 주고 drop에  position:엡솔준다  이유는 옆에 밀어내지 않을려고 붕띄게 만든다 */
+
+.menu>ul>li:hover>.drop{display:block; z-index: 3;}
+.menu>ul>li>.drop1{background-image: url(../img/gnb01bg.jpg);}
+.menu>ul>li>.drop2{background-image: url(../img/gnb02bg.jpg);}
+.menu>ul>li>.drop3{background-image: url(../img/gnb03bg.jpg);}
+.menu>ul>li>.drop4{background-image: url(../img/gnb04bg.jpg);}
+.menu>ul>li>.drop5{background-image: url(../img/gnb05bg.jpg);}
+.menu>ul>li>.drop6{background-image: url(../img/gnb06bg.jpg);}
+.menu>ul>li>.drop7{background-image: url(../img/gnb07bg.jpg);}
+.menu>ul>li>.drop8{background-image: url(../img/gnb08bg.jpg);}
+.menu>ul>li>.drop9{background-image: url(../img/gnb09bg.jpg);}
+.menu>ul>li>.drop10{background-image: url(../img/gnb010bg.jpg);left:-150px;}
+.menu>ul>li>.drop11{background-image: url(../img/gnb011bg.jpg);left:-300px;}
+/* drop1은 이미지들어가는 자리 */
+.menu>ul>li>.drop>ul{float:left; width:170px;}
+.menu>ul>li>.drop>p{float:left; width:209px; color:#fff; position:relative; }
+.menu>ul>li>.drop>p>.text1{position:absolute; top:30px; left:20px; font-weight: bold; font-size:1.1em;}
+.menu>ul>li>.drop>p>.text2{position:absolute; top:55px; left:20px; font-weight: bold; font-size:0.7em;}
+.menu>ul>li>.drop>ul>li{width:170px; height:30px; padding:5px 0;border-bottom:1px solid #ccc; background: #f2f2f2 url(../img/list_icon.png) no-repeat 10px 17px;}
+/* 투뎁스 넓이 높이 색상주기 백그라운드 블랙기호 이미지 */
+.menu>ul>li>.drop>ul>li>a{display:block; padding:7px 0; margin-left:20px;}
+
+
+/* 배너영역 */
+.banner{width:100%; overflow: hidden; position: relative;}
+/* overflow: hidden; 웹페이지에 스크롤바가 생기면안되기떄문에 준다 */
+.banner ul{}
+
+.banner ul li:not(:first-child){position:absolute; left:100%;}
+/* 펄스트차일드만뺴고 레프트 100퍼센트로가 */
+
+.banner ul li a{display: block;}
+.banner ul li a img{}
+
+
+/* 본문영역 */
+.rolling-banner{height:68px; background: tomato;}
+.real-stoy{height:363px; background: springgreen; margin-bottom: 60px;}
+.notice-wrap{height:260px; margin-bottom:60px; background: tan;}
+.gallery{height:930px; background: aquamarine; margin-bottom:60px;}
+.scrolling-banner{height:46px; background: blue;}
+/* 바닥에 scrolling-banner 붙기떄문에  contents에 padding-bottom: 60px 주면 띄어짐 */
+
+
+/* 하단영역 */

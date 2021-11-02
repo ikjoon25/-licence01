@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+   <head>
+      <title> 투명도를 이용한 롤오버 이미지 만들기 </title>
+      <meta charset="UTF-8" />
+      <style type="text/css">
+         *{margin: 0; padding: 0;}
+         /* body {
+            font:0.95em Arial,sans-serif;
+            margin:50px 0px;
+            }
+         header{text-align: center; text-transform: uppercase; text-shadow: 7px 7px 7px #000;font-size: 2em;}
+         nav{padding-top: 50px;}
+         #gallery{
+            list-style: none;
+            overflow: hidden;
+            width: 628px;
+            margin: 0 auto;
+         }
+         #gallery li{
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-right: 5px;
+            border: 3px solid #000;
+			position: relative;
+         }
+         #gallery li:last-child{margin-right: 0;}
+         #gallery li a{}
+         #gallery li a img{
+            width: 100%;
+			opacity: .5;
+         }
+         #gallery li a .color{
+			 width:100%;
+			 background-color: rgb(146, 199, 42,.5);
+			 position: absolute;
+			 top:-50px;
+			 left:0;
+			 padding:5px 0;
+			 display: block;
+			 text-align: center;
+			 transition: all.5s;
+		 }
+         #gallery li:hover a .color{top:0;}
+         #gallery li:hover a img{opacity: 1;} */
+		 /* body{ font:0.95em Arial,sans-serif;
+            margin:50px 0px;}
+		 header{text-align: center; text-transform: uppercase; font-size: 2em; text-shadow: 7px 7px 7px;}
+		 nav{padding-top: 50px;}
+		 #gallery{list-style: none; width:630px; overflow: hidden; margin:0 auto;}
+		 #gallery li{width: 200px;
+            height: 200px;
+            float: left;
+            margin-right: 5px;
+            border: 3px solid #000;
+			position: relative;}
+		 #gallery li:last-child{margin-right: 0;}
+		 #gallery a{}
+		 #gallery a img{width: 100%;
+			opacity: .5;}
+		 #gallery a .color{width:100%;
+			 background-color: rgb(146, 199, 42,.5);
+			 position: absolute;
+			 top:-50px;
+			 left:0;
+			 padding:5px 0;
+			 display: block;
+			 text-align: center;
+			 transition: all.5s;}
+			 #gallery li:hover a .color{top:0;}
+         	 #gallery li:hover a img{opacity: 1;} */
+             *{margin:0; padding:0;}
+             body{font:2.95em Arial, sans-serif; margin:50px 0px; }
+             header{text-align: center; text-shadow: 7px 7px 7px; text-transform:uppercase;}
+             nav{padding-top: 50px;}
+             #gallery{list-style:none; width:650px; overflow: hidden; margin:0 auto;}
+             #gallery li{width:200px; height:200px; float:left; position:relative; margin-right:5px; border:3px solid #000;}
+             #gallery li:last-child{margin-right:0;}
+             #gallery a img{width:100%; opacity: .5;}
+             #gallery a .color{width:100%; background-color: red; position:absolute; bottom:-100px; left:0; display:block; text-align: center; transition:all.5s; }
+             #gallery li:hover a .color{bottom:0;}
+         	 #gallery li:hover a img{opacity: 1;}
+      </style>
+   </head>
+
+   <body>
+      <header>
+         <h1>C/S/S/   s/h/o/e/s -  s/h/o/p</h1>
+      </header>
+      <nav>
+         <ul id="gallery">
+            <li href="#">
+               <a>
+                  <img src="images/bag_hotpink.png" alt="hotPink" />
+                  <span class="color">
+                     <strong>Hot Pink</strong>
+                  </span>
+               </a>
+            </li> 
+            <li href="#">
+               <a>
+                  <img src="images/bag_navy.png" alt="Navy" />
+                  <span class="color">
+                     <strong>Navy</strong>
+                  </span>
+               </a>
+            </li>
+            <li href="#">
+               <a>
+                  <img src="images/bag_white.png" alt="white" />
+                  <span class="color">
+                     <strong>White</strong>
+                  </span>
+               </a>
+            </li>
+         </ul>
+      </nav>
+   </body>
+</html>

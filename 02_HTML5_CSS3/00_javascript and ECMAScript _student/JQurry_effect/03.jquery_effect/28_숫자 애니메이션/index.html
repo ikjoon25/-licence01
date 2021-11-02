@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress_bar{position:relative; width:1000px; height:30px; margin:3em auto; border: 1px solid rgb(243, 187, 187);}
+        .progress_bar .bar{position:absolute; top:0; right:0; left:0; bottom:0; background-color:chartreuse;}
+        .progress_bar .num{position:absolute; top:0; bottom:0; right:15px; font-size: 1.1em; line-height: 30px; color:coral;}
+
+    </style>
+    <script src="./js/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <div class="progress_bar">
+        <div class="bar"></div>
+        <div class="num" data-num="80"></div>
+    </div>
+    <script>
+        const progressWrap=$('.progress_bar');
+        const progressBar=progressWrap.find('.bar')
+        let progressText=progressWrap.find('.num')
+        let progressNum=progressText.attr('data-num')
+
+        progressBar.css('width','0').animate({width:progressNum + '%'},2000);
+
+        function textAni(){
+            let currentWidth=progressBar.width() /progressWrap.width() *100;
+            progressText.text(Math.ceil(currentWidth)+'%');
+        }
+        setInterval(textAni,10);
+    </script>
+</body>
+</html>

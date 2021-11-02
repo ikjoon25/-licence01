@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 700px;
+            height: 550px;
+            margin: 100px auto;
+            background: rgb(43, 191, 228);
+            border:10px solid black;
+        }
+        #header{
+            width: 100%;
+            height:90px;
+            background-color: #ccc;
+            border-bottom: 10px solid #000;
+        }
+        #content{
+            width: 100%;
+            height:400px;
+            background-color: rgb(152, 158, 240);
+            
+        }
+        .left{
+            width: 100px;
+            height:400px;
+            background-color: red;
+            float: left;
+        }
+        .left>div{
+            width:100px;
+            height:100px;
+        }
+        .color1{background-color: aquamarine;}
+        .color2{background-color: rgb(244, 248, 11); height:100px;}
+        .center{
+            width: 480px;
+            height:400px;
+            background-color: rgb(0, 255, 21);
+            float: left;
+            border-left: 10px solid #000;
+            border-right: 10px solid #000;
+        }
+        .center>div{
+            width:100%;
+            height:200px
+        }
+        .color3{background-color: rgb(122, 11, 248);}
+        .color4{background-color: rgb(248, 11, 169);}
+        .right{
+            width: 100px;
+            height:400px;
+            background-color: red;
+            float: left;
+        }
+        .color5{
+            height:100px;
+            background-color: cadetblue;
+        }
+        .color6{
+            height:200px;
+            background-color: rgb(243, 204, 206);
+        }
+        #footer{
+            width: 100%;
+            height:40px;
+            background-color: #ccc;
+            border-top: 10px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <section id="content">
+            <div class="left">
+                <div class="color1"></div>
+                <div class="color2"></div>
+                <div class="color1"></div>
+                <div class="color2"></div>
+            </div>
+            <div class="center">
+                <div class="color3"></div>
+                <div class="color4"></div>
+            </div>
+            <div class="right">
+                <div class="color2"></div>
+                <div class="color5"></div>
+                <div class="color6"></div>
+            </div>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

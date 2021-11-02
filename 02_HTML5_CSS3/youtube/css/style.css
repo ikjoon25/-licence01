@@ -1,0 +1,86 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --white-color:#fff;
+    --black-color:#111;
+    --blue-color:#00a3d9;
+    --red-color:#b3002d;
+    --grey-dark-color:#777;
+    --grey-medium-color:#9b9b8c;
+    --grey-light-color:#dfdfd0;
+    --padding:12px;
+    --avatar-padding:36px;
+    --font-large:18px;
+    --font-small:12px;
+    --font-medeum:14px;
+}
+/* 변수설정  */
+/* 머릿말 */
+body{font-family: 'Roboto', sans-serif;}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color)
+}
+header>.logo{
+    font-size: var(--font-large);
+}
+header .logo .fa-youtube{color:var(--red-color)}
+header>.icon .fa-search{margin-right: var(--padding);}
+
+/* 비디오 */
+.player{
+    position:sticky;
+    top:0;
+    background-color: var(--black-color);
+    text-align: center;
+}
+/* sticky 고정시키는거 */
+.player video{max-width:1000px;}
+
+/* 인포 */
+.info{padding:var(--padding);}
+button{background: none;}
+.info .metadata{}
+.info .metadata .hashtags{display: flex; color:var(--blue-color); font-size:var(--font-small);}
+.info .metadata .hashtags li{}
+.info .metadata .titleAndButton{display: flex;}
+.info .metadata .titleAndButton .title{
+    font-size:var(--font-medium); margin-right:var(--padding);
+    overflow: hidden;
+    word-wrap:break-word;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+}
+.info .metadata .titleAndButton .title.addTilte{
+    font-size:var(--font-medium); margin-right:var(--padding);
+    overflow: hidden;
+    word-wrap:break-word;
+    display:-webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+}
+.info .metadata .titleAndButton .moreBtn{
+    height:100%;
+    transition: transform 300ms ease-in-out;
+}
+.info .metadata .titleAndButton .moreBtn.clicked{
+    height:100%;
+    transform:rotate(180deg);
+}
+.info .metadata .views{}
+.info .metadata .views .view{
+    font-size:var(--font-small);
+    color:var(--grey-dark-color);
+}
+
+
+.actions{display:flex; justify-content: space-around; padding:var(--padding) 0;}
+.actions li{}
+.actions li button{display: flex; flex-direction: column; font-size: var(--font-small); color:var(--grey-dark-color);}
+.actions li button i{font-size:16px; margin:0 auto; margin-bottom: calc(var(--padding)/2);} 
+.actions li button .active{color:var(--blue-color)}
+.actions li button span{}

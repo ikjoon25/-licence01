@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>visibility</title>
+    <style>
+        #box span{background-color: sandybrown; visibility: hidden;}
+        #box:hover span{visibility:visible;}
+
+        #box1 span{background-color: sandybrown; opacity: 0;}
+        #box1:hover span{opacity: 1;}
+
+        #box2 span{background-color: sandybrown; display: none;}
+        #box2:hover span{display: block;}
+    </style>
+</head>
+<body>
+    <span>진짜 한시간</span>
+    <div id="box">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nesciunt sapiente expedita tempora culpa atque laboriosam, aspernatur hic? Placeat cumque optio sit iste voluptas quasi vel officia necessitatibus. Error, unde.</span>
+    </div>
+    <span>남았네</span>
+    <br>
+    <span>진짜 한시간</span>
+    <div id="box1">
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nesciunt sapiente expedita tempora culpa atque laboriosam, aspernatur hic? Placeat cumque optio sit iste voluptas quasi vel officia necessitatibus. Error, unde.</span>
+    </div>
+    <span>남았네</span>
+    <br>
+    <span>진짜 한시간</span>
+    <div id="box2">nnn
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae nesciunt sapiente expedita tempora culpa atque laboriosam, aspernatur hic? Placeat cumque optio sit iste voluptas quasi vel officia necessitatibus. Error, unde.</span>
+    </div>
+    <span>남았네</span>
+</body>
+</html>

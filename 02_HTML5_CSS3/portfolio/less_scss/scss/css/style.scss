@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+body{padding: 100px 20px; width: 600px; margin: 0 auto; border: 5px solid #ddd;}
+// 1.변수는 영문, 영문+숫자, 영문, _소문자
+$gray: #666;
+$white: #fff;
+$blue: blue;
+$red: #c00505;
+$fs24:24px;
+
+.btn1{
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    color: $gray;
+    background: $white;
+    border: 1px solid $gray;
+    text-align: center;
+    &:hover{background: $gray; color: $white}
+}
+.btn2{
+    padding: 10px;
+    font-size: $fs24;
+    border: 1px solid $red;
+    background: $blue;
+    &:hover{background-color: $red;}
+}
+
+// -------------------------------
+// 2.선택자 자식 선택자, 종속 선택자
+.sass{color: $red;
+    ul{border:1px solid $red;
+        >li{
+            background: pink;
+            a{text-decoration: none;
+                &:hover{color: $red}
+                &.bbb{font-size: 12px;}
+            }
+            .bbb{text-decoration: underline;}
+            &:last-child{border: 1px dotted blue}
+        }
+    }
+}
+
+// 3.mixin과 include -mixin 함수라고 생각하면 될것 같음 반복되는 곳에 불러냄
+@mixin test{
+    width:100px;
+    height:100px;
+    border:1px solid $red;
+    margin-bottom:10px;
+}
+.test{@include test();} //include불러주는
+
+@mixin clear {
+    &:after{content: ""; display:block; clear:both;}
+}
+.clearfix{
+    background: rgb(230, 255, 4);
+    border:3px solid #0086b3;
+    @include clear();
+
+}
+.clearfix p{float:left; @include test();}
+
+
+// 4. 매개변수 
+@mixin border($color) {
+    border:1px solid $color;
+    padding:5px;
+    margin-bottom:5px;
+}
+.var{@include border(green)}
+.red{@include border(rgb(255, 0, 0))}
+.green{@include border(green); display:block;}
+
+@mixin box($w, $h){
+    width: $w;
+    height: $h;
+
+}
+.var2{@include box(300px, 100px); background:rgb(252, 235, 0);}
+
+//5.문자 보관법 -
+@mixin bx1($position, $wid, $color1){
+    border-#{$position}:$wid solid $color1;
+}
+.string1{@include bx1(top, 5px, green);}
+.string2{@include bx1(left, 5px, red);}
+.string2{@include bx1(right, 5px, red);}
+
+// 6. for 반복문  
+.list li{background: no-repeat 0 50%/20px 20px; text-indent: 30px; line-height: 50px;}
+//0 0/20px 30px; <-사이즈
+//.list li.ico1{background-image: url(../img/icon1.png);}
+//.list li.ico2{background-image: url(../img/icon2.png);}
+//.list li.ico3{background-image: url(../img/icon3.png);}
+//.list li.ico4{background-image: url(../img/icon4.png);}
+//.list li.ico5{background-image: url(../img/icon5.png);}
+
+// for(초기값, 최종값, 증감식){
+
+//}
+@for $i from 1 to 6{
+    .list li.ico#{$i}{background-image: url(../img/icon#{$i}.png);}
+    .list li:nth-child(#{$i}):before{
+        content:"제목 #{$i}";
+    }
+}
+
+//7. each
+/* $var===#{var} 함수명 in 안에 북 줌 뉴  */
+@each $var in book, zoom, new{
+    .ico_#{$var}{
+        background: url(../img/ico_#{$var}.png) no-repeat 0 50%/30px 30px; text-indent: 80px; line-height: 50px;
+    }
+}
+$heading:(h1:30px, h2:20px, h3: 15px);
+
+@each $ele, $fs in $heading{
+    #{$ele}{
+        font-size: $fs;
+    }
+}
+
+//8. if 조건문
+
+@mixin btn_radius($h, $radius:true){
+    padding:0 20px; height:$h; line-height: $h; text-align:center; background: #000; color:#fff;
+    @if $radius{
+        border-radius: $h/2;
+    }@else{
+        border:1px solid red;
+    }
+}
+.btn{@include btn_radius(50px, false)}
+
+@mixin position($x, $y, $z) {
+    position: absolute; left: $x; top:$y; z-index: $z;
+
+    @if($x==50% and $y==50%){
+        transform: translate(-50%, -50%);
+    }@else if($x==50%){
+        transform: translateX(-50%);
+    }@else if($y==50%){
+        transform: translateY(-50%);
+    }
+}
+.if{width: 100px; height: 100px; background: chartreuse; @include position(50%, null,  2)}

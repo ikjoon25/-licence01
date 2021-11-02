@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>시멘틱 연습</title>
+    <style>
+        #wrap{
+            height: 750px; width: 1000px; background: red; text-align: center;
+        }
+        header{
+            height: 100px; width: 100%; background: blue;
+        }
+        nav{
+            height: 50px; width: 100%; background: greenyellow;
+        }
+        main{
+            height: 500px; width: 1000px; background: purple;
+        }
+        main aside{
+            height: 100%; width: 100px; background: pink; float: left;
+        }
+        main section{
+            height: 100%; width: 800px; background: yellow; float: left;
+        }
+        main section article{
+            height: 150px; width: 100%; background: orange; margin-bottom: 25px;
+        }
+        footer{
+            height: 100px; width: 100%; background: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header>Header</header>
+        <nav>Navigation</nav>
+        <main>
+            <aside>Aside1</aside>
+            <section>
+                <article>Article1</article>
+                <article>Article2</article>
+                <article>Article3</article>
+            </section>
+            <aside>Aside2</aside>
+        </main>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

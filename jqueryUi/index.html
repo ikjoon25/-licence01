@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="post">
+            <div id="progress">
+                <div class="pct">
+                    <span>0</span>% completed
+                </div>
+            </div>
+            <h1>jQuery UI Form Elements</h1>
+            <div class="ui-widget1">
+                <label for="location">Select a location</label>
+                <select name="location" id="location">
+                    <optgroup label="texas">
+                        <option value="Fort Worth">Fort Worth</option>
+                        <option value="Odessa">Odessa</option>
+                        <option value="Muleshoe">Muleshoe</option>
+                    </optgroup>
+                    <optgroup label="Oklahoma">
+                        <option value="Ardmore">Ardmore</option>
+                        <option value="Tulsa">Tulsa</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="ui-widget1">
+                <label for="category">select</label>
+                <input type="text" id="category" class="ui-corner-all ui-button">
+            </div>
+            <div class="ui-widget1">
+                <label for="experience">experience</label>
+                <input id="experience" >
+            </div>
+            <div class="ui-widget1">
+                <label for="startDate">출근 가능 날짜?</label>
+                <input type="text" id="startDate" class="ui-corner-all ui-button">
+            </div>
+
+            <fieldset>
+                <legend>우리 사이트는 어떻게 알고 지원하셨나요?</legend>
+                <label for="rdInternet">인터넷</label>
+                <input type="radio" id="rdInternet" name="refer" value="internet">
+
+                <label for="rdtv">TV</label>
+                <input type="radio" id="rdtv" name="refer" value="tv">
+
+                <label for="rdother">기타</label>
+                <input type="radio" id="rdother" name="refer" value="other">
+                
+            </fieldset>
+            <button id="submit">Submit Form</button>
+        </form>
+    </div>
+</body>
+</html>

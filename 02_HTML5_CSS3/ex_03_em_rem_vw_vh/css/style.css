@@ -1,0 +1,15 @@
+*{margin:0; padding:0;}
+:root{font-size: 18px;}
+/* html{height:100%;} */
+body{font-size:12px;/ height:100%;}
+.clearfix{background: red;}
+.clearfix::after{ content:""; display:block; clear:both}
+.box{float:left; margin-right:20px; background: cyan; color:white; text-align: center;}
+.box_px{width:160px; height:160px;}
+.wrap{font-size:10px;}
+.box_em{width:10em; height:10em;}
+.box_rem{width:10rem; height:10rem;}
+p{width:100%; height:100vh; font-size: 1.5rem; background: chartreuse;}
+
+/* 클리어픽스는 자식이 플릇레프트를하면 높이값을 잃어서  클리어보쓰를 사용한다. */
+/* em은 바로위에있는 부모 기점으로 사이즈가 바뀐다.    rem은 root기준으로 폰트사이즈가 바뀐다 */

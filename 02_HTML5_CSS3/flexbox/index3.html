@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <style>
+        .container{width:90%; margin:20px auto; height:500px; border:5px solid #ddd; display:flex;}
+        .container>div{width:300px; height:300px;}
+        .container>div:nth-child(1){background-color: chartreuse;order:3}
+        .container>div:nth-child(2){background-color: chocolate;order:2}
+        .container>div:nth-child(3){background-color: cornflowerblue;order:1}
+
+        /* order:기본이 0  숫자 큰 친구가 맨 뒤로감 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>item1</div>
+        <div>item2</div>
+        <div>item3</div>
+    </div>
+</body>
+</html>

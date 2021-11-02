@@ -1,0 +1,16 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: #222;}
+body{background-color: lightcyan; color: #000; min-width: 960px; }
+.page-header{background-color: rgba(255, 255, 255, .1); height: 70px; width: 100%; min-width: 960px; margin: 0 auto; box-shadow: 0 1px 1px #ccc; transition:all 5s;}
+.page-header.sticky{position: fixed; top: 0; background: rgb(241, 189, 189); }
+.page-header .inner{width: 960px; margin: 0 auto;}
+.page-header .inner h1{float: left;}
+.page-header .inner h1 a{color: black; padding-top: 10px; display: block; letter-spacing: 2px;} 
+.page-header .inner nav{float: right; line-height: 70px;}
+.page-header .inner nav ul{display: flex;}
+.page-header .inner nav ul li{}
+.page-header .inner nav ul li a{text-transform: uppercase; display: block; padding: 0 10px;}
+.text{width: 500px; padding: 50px 0; margin: 0 auto;}
+.text p{line-height: 1.8;}

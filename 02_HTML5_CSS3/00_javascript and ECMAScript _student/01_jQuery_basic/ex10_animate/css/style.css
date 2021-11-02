@@ -1,0 +1,35 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+.quick_toggle{
+    position: fixed;
+    top: 0;
+    right: 70px;
+    width: 70px;
+    height: 70px;
+    background: url(../image/quick_close.png) no-repeat;
+    display: block;
+    cursor: pointer;
+}
+.indent{display: block; text-indent: -999999em; }
+.quick_open{
+    position: fixed;
+    top: 0;
+    right: 70px;
+    width: 70px;
+    height: 70px;
+    background: url(../image/quick_open.png) no-repeat;
+    display: block;
+    cursor: pointer;
+}
+.quickmenu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 100%;
+    background: #585858;;
+}
+.quick_icon{list-style: none; padding-top: 10px;}
+.quick_icon li{text-align: center;}
+.quick_bt{list-style: none; position: absolute; bottom:0; right: 0}
+.quick_bt li{padding: 1px 0;}

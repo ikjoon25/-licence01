@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin:100px; font-size:60px;}
+        .container{height:120px; }
+        .div1{background: red; padding:20px; display: none;}
+        .div2{background: green;padding:20px;}
+        .div3{background: rgb(245, 248, 35);padding:20px;}
+    </style>
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script>
+        $(function(){
+            $('.div1').fadeIn(4000);
+            $('.div2').fadeOut(4000);
+            $('.div3').fadeTo(4000,.3);//.3은 투명도
+        });
+    </script>
+</head>
+<body>
+    <div class="container"><div class="div1">fadeIn </div></div>
+    <div class="container"><div class="div2">fadeOut </div></div>
+    <div class="container"><div class="div3">fadeTo </div></div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+
+*{margin:0; padding:0; border:0;}
+.cf:after{content:""; display:block; clear:both;}
+.cb{clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+li{list-style:none;}
+a{text-decoration:none;}
+html, body{width:100%; height:100%;} 
+html{overflow: hidden;}
+#wrap{width:calc(1920px*7)} /* 7개 모두 1920으로해 */
+
+.section{position: relative; float:left; max-width: 1920px; width: 100%; color: #fff; text-align: center; font-weight: 600; text-transform: uppercase; font-size: 100px; line-height: 969px;}
+#section1{background:#ff0000;}
+#section2{background:#00ff00;}
+#section3{background:#0000ff;}
+#section4{background:#ffff00;}
+#section5{background:#00ffff;}
+#section6{background:#ff00ff;}
+#section6{background:#ff00ff;}
+#section7{background:#0b551b;}

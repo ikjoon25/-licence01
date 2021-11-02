@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const num=2.1234;                             /* const절대값 */
+        const maxNum=Math.max(12,2,3,5,14);
+        console.log(maxNum);
+        const minNum=Math.min(2,4,3,1,8);
+        console.log(minNum);//1
+        const roundNum=Math.round(num);
+        console.log(roundNum);//2 소수점 첫번쨰자리에서 반올림
+        const floorNum=Math.floor(num);
+        console.log(floorNum);//2
+        const ceilrNum=Math.ceil(num);
+        console.log(ceilrNum);//3 소수점 무조건 올림
+        const rndrNum=Math.random();
+        console.log(rndrNum);//0
+        const piNum=Math.PI;
+        console.log(piNum);//3.14
+
+        document.write(`<h1> 컴퓨터 가위, 바위, 보 맞추기</h1>`);
+        let game=prompt("가위, 바위, 보 중 선택하세요","가위");
+        let gameNum;
+        switch (game) {
+            case "가위":
+                gameNum =1; break;
+            case "바위":
+                gameNum =2; break;
+            case "보":
+                gameNum =3; break;
+            dafault.alert("잘못 작성하였습니다");
+            location.reload();
+        }
+
+        let com=Math.ceil(Math.random()*3);
+        document.write(`<img src="images/math_${com}.jpg" />`);
+
+        if(gameNum==com){
+            document.write(`<img src="images/game_1.jpg" />`)
+        }else{
+            document.write(`<img src="images/game_2.jpg" />`)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

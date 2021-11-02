@@ -1,0 +1,17 @@
+#wrap{width: 100%;}
+body{line-height: 1.8;}
+header{background: #00d9d9; padding: 30px;}
+h1{text-align: center;
+    font-size: 36px;
+    font-family: "Times New Roman", serif;
+    margin-bottom: 20px;
+    margin-top: 20px;
+	color: white;
+    line-height: 1.2;
+    text-align: center;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+.container{width:1080px; padding: 60px; margin: 0 auto; background: #fff; box-shadow:5px 5px 10px #666;}
+ol, ul{ list-style-position : inside; margin: 20px;}
+p{margin-bottom: 20px;}
+pre{background: #333; height: inherit; color: #fff; padding: 20px; box-sizing: border-box}

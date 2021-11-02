@@ -1,0 +1,13 @@
+*{margin:0; padding:0;}
+ul{list-style: none;}
+
+#wrap{margin:100px;}
+#wrap #nav{}
+#wrap #nav li{/* width:113px; */ cursor: pointer; text-align: center; float:left;}
+#wrap #nav li .menu_image{width:0; overflow: hidden; float:left;}
+#wrap #nav li .menu_image a{}
+#wrap #nav li .menu_image a img{width:97px;}
+#wrap #nav li .text_img{padding-left: 10px; padding-top:40px; padding-right:10px; float:left;}
+#wrap #nav li .text_img .off{display:block;}
+#wrap #nav li .text_img .off img{}
+#wrap #nav li .text_img .on{display:none;}

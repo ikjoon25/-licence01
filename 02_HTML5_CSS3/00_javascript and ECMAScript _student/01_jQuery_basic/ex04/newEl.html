@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{line-height: 200%; width:1000px; margin:100px auto;}
+        #div1{height:300px; background-color: violet;}
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(function () {
+            const div1=$('#div1');
+            $('#div1').hover(function(){
+                div1.append('<img src="images/photo.jpg">');
+            },function(){
+                div1.append('<img src="images/img1.gif">');
+            });
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="div1"></div>
+</body>
+</html>

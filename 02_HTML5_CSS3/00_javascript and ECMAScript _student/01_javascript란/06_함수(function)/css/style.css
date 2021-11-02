@@ -1,0 +1,22 @@
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: #222;}
+
+#gallery{width: 350px; margin: 30px auto; border: 5px solid rgb(223, 41, 207)}
+#gallery h1{text-align: center;}
+
+/* 큰이미지 */
+#gallery #photo{text-align: center;}
+#gallery #photo img{}
+
+/* 작은이미지 */
+#gallery #photo_list{width:300px; margin:10px auto; overflow: hidden;}
+#gallery #photo_list ul{width:800px; margin:0 auto; }
+#gallery #photo_list ul li{float:left;}
+#gallery #photo_list ul li a{}
+#gallery #photo_list ul li a img{}
+
+/* 버튼 */
+#gallery .btn_wrap{}
+#gallery .btn_wrap #before_btn{}
+#gallery .btn_wrap #next_btn{}

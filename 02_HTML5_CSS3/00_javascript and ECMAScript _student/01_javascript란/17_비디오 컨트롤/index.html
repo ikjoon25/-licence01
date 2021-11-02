@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <button id="audioPlay">audio Play</button>
+    <button id="audiopause">audio pause</button>
+    <audio src="./audio/Honey_Bee_01_web.mp3" id="aPlay"></audio>
+    <hr>
+    <button id="videoPlay">video Play</button>
+    <button id="videopause">video pause</button>
+    <video src="./video/vivaldi.mp4" id="vPlay" muted></video>
+    <hr>
+
+    <script>
+const audioplay=document.getElementById('aPlay');
+        document.getElementById('audioPlay').addEventListener('click',playAudio);
+        document.getElementById('audiopause').addEventListener('click',pauseAudio);
+
+        function playAudio(){
+            audioplay.play();  
+        }
+        function pauseAudio(){
+            audioplay.pause(); 
+        }
+    </script>
+</body>
+</html>

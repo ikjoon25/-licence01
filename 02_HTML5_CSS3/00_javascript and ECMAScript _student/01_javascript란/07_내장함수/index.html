@@ -1,0 +1,316 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 함수 정의하기</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="wrap">
+	<div class="article">
+        <h2>JavaScript 내장 함수인 메소드들</h2>
+	</div>
+	<h3>내장 함수인 메소드들</h3>
+	<p>alert와 confirm, prompt은 원래 window.alert()식으로 표현된다<br>
+    그러나 window객체는 window라는 객체를 생략해서 사용하고 있기 때문에 window객체의 메소드보다는 내장함수로 분류해서 사용한다</p>
+	<p>&nbsp;</p>
+
+    <h3>내장함수  </h3>
+	 <p>
+	parseInt() 문자형 데이터를 정수형 데이터로 바꿈(소숫점 없는) <br>
+	parseFloat() 문자형 데이터를 실수형 데이터로 바꿈 <br>
+	String() 문자형 데이터로 바꿈<br>
+	Number() 숫자형 데이터로 바꿈<br>
+	Boolean() 논리형 데이터로 바꿈 <br>
+	IsNaN() 'Not a Number'의 약자로 데이터에 숫자가 아닌 문자를 포함하면 true을 반환 <br>
+	eval() 문자형 데이터를 큰따옴표가 없는 스크립트 코드로 처리 산술계산해줌 <br>
+  </p>
+    <p>(사용예) 메세지 창을 열어주는 alert 내장함수 사용법</p>
+    
+<pre>
+&lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        alert(&quot;저의 집에 오신 것을 환영합니다.&quot;)
+    <span class="green">//--&gt;</span>
+&lt;/script&gt;
+</pre>
+
+    <p>&nbsp;</p>
+    <p>(사용예) alert를 응용 퀴즈문제 만들기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt;퀴즈문제&lt;/title&gt;
+    &lt;script languge=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        function quiz()
+        {
+            alert(&quot;I know what you did last summer.  &quot;)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;<br>  <p>&lt;body style=&quot;background-color: black; color: white; margin-top: 50px;&quot;&gt;
+    &lt;p&gt;&lt;img src=&quot;quiz.jpg&quot; style=&quot;display: block; margin: 0 auto;&quot;&gt;&lt;/p&gt;
+    &lt;form name=&quot;form1&quot;&gt;
+        &lt;p style=&quot;text-align: center;&quot;&gt;위 영화 제목은
+        &lt;input type=&quot;submit&quot; value=&quot;  ??  &quot; onclick=&quot;quiz()&quot;&gt; 입니다.&lt;/p&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>선택대화상자를 만들어 주는 confirm()함수</h3>
+    <p>(사용예) 미성년자 출입금지</p>
+<pre>
+&lt;script language=&quot;javascript&quot;&gt;
+<span class="green">&lt;!--</span>
+    haha=confirm(&quot;18세 이상이면 [확인] 단추를 클릭하세요&quot;)
+    if(haha==true) location.href=&quot;a.htm&quot;
+    else location.href=&quot;b.htm&quot;
+<span class="green">//--&gt;</span>
+&lt;/script&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>(사용예) 창크기 조절해서 열기 <span class="blue">(익스10 O / 파폭 X 다르게 반응)</span></p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt;창크기조절&lt;/title&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        haha=confirm(&quot;해상도가 모바일 (320*568)이면 [확인]단추를 <span class="blue">\n</span>태블릿 (1024*768)이라면[취소]단추를 클릭하세요&quot;)
+        if(haha==true) small()
+        else large()
+
+        function small()
+        {
+            window.resizeTo(320, 568)
+        }
+        
+        function large()
+        {
+            window.resizeTo(1024, 768)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+    &lt;style&gt;
+        #wrap{position: absolute; top: 50%; left: 50%; width: 200px; height: 200px; 
+              margin-top: -100px; margin-left: -100px; background: url(polornote.gif) no-repeat;}
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div id=&quot;wrap&quot;&gt;&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>입력 대화 상자를 만들어 주는 prompt()함수  </h3>
+    <p>(사용예) 비밀번호 홈페이지 만들기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;title&gt;비밀번호&lt;/title&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        code = prompt(&quot;비밀번호를 입력하세요.&quot;,&quot;&quot;)
+        if (code==&quot;1234&quot;) location.href=&quot;welcome.htm&quot;
+        else  document.write(&quot;비밀번호가 틀렸네요.&quot;)
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;</pre>
+<p>함수에서 return문의 역할  </p>
+<p>return문이란 함수에서 결괏값을 되돌려 줄 때 사용. 
+	함수에서  return문이 실행되면 반복문에서 break문과 비슷하게 실행문이 강제로 종료 즉, 함수정의문에 실행문으로 return문이 사용되었으면, 함수를 호출했을 때 결과값을 반환하고 진행중이던 실행문을 정지시키고 함수를 강제로 종료
+  </p>
+<h3>시간에 따라 명령을 수행하게 해주는 메소드들</h3>
+	<p>setTimeout(a,b) - a : 함수나 명령어<br>
+    b : 지연 시간 (1/1000초 단위)<br>
+    clearTimeout(a) - setTimeout()으로 설정한 내용을 중지한다</p>
+    
+    
+    
+	<p>&nbsp;</p>
+	<h3>시간에 따라 반복하여 명령을 수행하는 메소드들</h3>
+	<p>A = setInterval(a,b) - a : 함수나 명령어<br>
+    b : 지연 시간 (1/1000초 단위)<br>
+    clearInterval(A)     - 변수 A에 정의된 setInterval()의 실행을 중지</p>
+    <p>사용예) 시계만들기</p>
+    
+<pre>
+다음 내용을 &lt;head&gt;태그 사이에 입력한다
+&lt;head&gt;
+    &lt;title&gt;시계만들기&lt;/title&gt;
+&lt;script language = &quot;JavaScript&quot;&gt;
+<span class="green"></span>    function start_clock() 
+    {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();<br>        var date = now.getDate();
+
+        if(seconds &lt; 10) seconds = &quot;0&quot; + seconds;
+        if(minutes &lt; 10) minutes = &quot;0&quot; + minutes;
+        if(date &lt; 10) date = &quot;0&quot; + date;
+        if(hours &lt; 12) minutes = minutes + &quot; A.M &quot;;
+            else if(hours &gt;= 12) minutes = minutes + &quot; P.M &quot;
+        if(hours == 0) hours = hours + 12; 
+            else if(hours &gt; 12) hours = hours - 12;
+            
+        var time = hours + &quot;:&quot; + minutes + &quot;:&quot; + seconds; 
+        document.time_form.clock.value = time;
+        setTimeout(&quot;start_clock()&quot;, 100);
+    }
+<span class="green"></span>&lt;/script&gt;
+&lt;/head&gt;
+
+앞에 입력했던 start_clock()함수를 실행하는 이벤트 핸들러를 &lt;body&gt;태그에 삽입한다. onload=&quot;start_clock&quot;를 입력
+&lt;body background=&quot;back4.jpg&quot; <span class="red">onLoad =&quot;start_clock()&quot;</span>&gt;
+
+다음 소스를 &lt;bady&gt;태그 사이 시계를 삽입할 위치에 입력한다
+    &lt;form name = &quot;time_form&quot;&gt;
+        &lt;input name = &quot;clock&quot; size = &quot;12&quot; value = &quot;   TIME  &quot;&gt;
+    &lt;/form&gt;
+</pre>
+
+
+
+	<p>&nbsp;</p>
+    <p>사용예) 그림이 커졌다 작아졌다 변하게 만들기</p>
+    
+<pre>
+다음 내용을 &lt;head&gt;태그 사이에 입력한다<br>
+&lt;head&gt;&lt;title&gt;크기가 변하는 그림&lt;/title&gt;
+&lt;script language=&quot;JavaScript&quot;&gt; 
+<span class="green"></span>    var b = 1; 
+    var c = true; 
+    var img_width =600;
+    var img_height =413;
+    
+    function fade(){ 
+        if(c == true) b++ 
+        if(b==100) {b-- ; c = false } 
+        if(b==10) {b++; c = true; } 
+        if(c == false) b-- 
+        u.width=img_width + b; 
+        u.height=img_height - b; 
+        setTimeout(&quot;fade()&quot;,50); } 
+<span class="green"></span>&lt;/script&gt;
+&lt;/head&gt;
+
+앞에 입력했던 fade()함수를 실행하는 이벤트 핸들러를 &lt;body&gt;태그에 삽입한다.
+onload=&quot;fade()&quot;를 입력 다음 소스를 &lt;bady&gt;태그 사이에 효과를 적용할 그림을 삽입한다.
+효과를 적용할 그림을 선택하기 위해서는 &lt;img&gt; 태그에 'u'라는 name속성을 사용한 후, 자바스크립트에서 제어한다.
+    <span class="red">&lt;center&gt;&lt;img src=&quot;bt.jpg&quot; name=&quot;u&quot; border=&quot;1&quot;&gt;&lt;/center&gt;</span>
+    
+&lt;body onLoad=&quot;fade()&quot;&gt;
+    &lt;center&gt;&lt;img src=&quot;bt.jpg&quot; name=&quot;u&quot; border=&quot;1&quot;&gt;&lt;/center&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+	<p>&nbsp;</p>
+    <h3>윈도우 창 속성을 설정해 주는 window 객체 메소드 </h3>
+	<p>문서를 프린트해주는 메소드<br>
+    print() : 현재 열려있는 문서를 인쇄한다</p>
+	<p>사용예)</p>
+<pre>
+비천무.html문서를 불러와 &quot;인쇄하기&quot; 실행 단추에 입력한 내용을 다음과 같이 수정한다.
+  
+&lt;input type=&quot;button&quot; value=&quot;인쇄하기&quot; onClick=&quot;window.print()&quot;&gt;
+</pre>
+
+
+
+	<p>&nbsp;</p>
+	<h3>윈도우 창 크기를 조절해 주는 메소드들</h3>
+    resizeBy(a,b) - a : 변경할 가로 길이(픽셀)<br>
+    b : 변경할 세로 길이(픽셀)<br>
+    resizeTo(a,b) - 가로a, 세로b 만큼 창의 크기를 설정<br>
+    <p>사용예)&nbsp;익스</p>
+    
+<pre>
+창크기를 조절할 단추를 두개 만든다.
+
+&lt;body&gt;<br>&lt;form&gt;
+    &lt;input type=&quot;button&quot; value=&quot;축소하기&quot; onclick=&quot;window.resizeBy(-50,-50)&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;600*460크기&quot; onclick=&quot;window.resizeTo(600,460)&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+
+이벤트 핸들러를 사용하여 &quot;축소하기&quot; 단추에는 resizeBy 핸들러를 &quot;600*460크기&quot; 단추에는 resizeTo 핸들러가 실행되도록 한다.
+
+    &lt;input type=&quot;button&quot; value=&quot;축소하기&quot; onclick=&quot;window.resizeBy(-50,-50)&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;600*460크기&quot; onclick=&quot;window.resizeTo(600,460)&quot;&gt;
+</pre>
+
+
+
+	<p>&nbsp;</p>
+	<h3>창 위치를 조절해주는 메소드들</h3>
+	<p>moveBy (a,b) - a : 이동할 가로 길이(픽셀)<br>
+    b : 이동할 세로 길이(픽셀)<br>
+    moveTo (a,b) - 화면 왼쪽 상단을 기준으로 창의 위치를 가로 a, 세로 b 만큼 이동</p>
+    <p>사용예) 익스</p>
+    
+<pre>
+창위치를 조절할 단추를 두개 만든어 메소드를 적용한다
+
+&lt;body&gt;
+&lt;form&gt;
+    &lt;input type=&quot;button&quot; value=&quot;오른쪽으로 이동하기&quot; onclick=&quot;window.moveBy(200,0)&quot;&gt;
+    &lt;input type=&quot;button&quot; value=&quot;왼쪽 상단에 정렬하기&quot; onclick=&quot;window.moveTo(0,0)&quot;&gt;
+&lt;/form&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+	<p>&nbsp;</p>
+	<h3>문서를 스크롤 해주는 메소드들</h3>
+	<p>scrollBy (a,b) - a : 스크롤할 가로 길이(픽셀)<br>
+    b : 스크롤할 세로 길이(픽셀)<br>
+    resizeTo (a,b) - 화면 좌측 상단을 기준으로 가로a 또는 세로b 만큼 윈도우 내용을 스크롤</p>
+    <p>사용예) 익스</p>
+<pre>
+자우림.htm을 불러온 다음 &lt;input&gt; 태그 안에 이벤트 핸들러를 사용해서 단추를 클릭하면 
+화면 아래로 2500픽셀 만큼 스크롤 하도록 내용을 입력
+
+    &lt;input type=&quot;button&quot; value=&quot;문서 스크롤&quot; onclick=&quot;scrollBy(0,2500)&quot;&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <p>사용예) 문서를 자연스럽게 스크롤하게 만들기</p>
+	<pre>자우림.htm을 불러온 다음 &lt;head&gt;태그 사이에 다음 내용을 입력한다
+&lt;head&gt;
+    &lt;title&gt;자우림&lt;/title&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+        function scr()
+        {
+            scrollBy(0,10)
+            setTimeout('scr()',100)
+        }
+    &lt;/script&gt;
+&lt;/head&gt;
+  
+다음 내용을 &lt;bady&gt;태그 안에 문서가 열릴 경우에 동작하게 해주는 이벤트 핸들러를 입력한다
+
+&lt;body bgcolor=&quot;#76006C&quot; <span class="blue">onload=&quot;scr()&quot;</span>&gt;
+</pre>
+	<p>&nbsp;</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+*{margin:0; padding:0;}
+body{
+    padding:30px 50px;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.all{width:610px;}
+.tabSet{border:2px solid #ddd; padding:0 0 1em; margin:0 0 20px; border-radius: 4px;}
+ul{overflow: hidden; padding:12px 12px 0; border-radius: 4px; background: #ddd;}
+ul li{list-style:none; float:left; padding: 0 4px 0 0px;}
+ul li a{text-decoration:none; background: #fff; color:#666; display:block; padding:5px 10px; border-radius: 4px 4px 0px 0;}
+ul li a.on{background: rgb(93, 194, 25); color:#666;}
+.panels{}
+.panels .panel{ width:570px; margin:0 0 .5em; padding: .75em 15px .4em; background: #fff; cursor: default;}

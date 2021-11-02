@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin:100px; font-size:20px;}
+        #div1{border:3px solid #2e2e2e; padding:20px;}
+        #div2{border:3px solid #2e2e2e; padding:20px;}
+
+    </style>
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script>
+        $(function(){
+            $('#input1').val('value값을 바꾸고 싶어요');
+            $('#textarea1').val('나 바뀜');
+            $('#select1').val('city2');
+            $('#select2').val('town2','town3');
+        });
+    </script>
+</head>
+<body>
+<form action="#" method="get">
+    <input type="text" id="input1" value="텍스트필드입니다.">
+    <textarea name="textarea1" id="textarea1" cols="30" rows="10">텍스트필드입니다.</textarea>
+    <select name="" id="select1">
+        <option value="city1">서울</option>
+        <option value="city2">대전</option>
+        <option value="city3">부산</option>
+    </select>
+    <select name="" id="select2" mjultiple>
+        <option value="town1">동구</option>
+        <option value="town2">중구</option>
+        <option value="town3">서구</option>
+    </select>
+</form>
+</body>
+</html>

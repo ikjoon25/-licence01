@@ -1,0 +1,13 @@
+*{margin:0; padding:0;}
+ul{list-style: none;}
+
+#wrap{margin:100px;}
+#wrap #nav{}
+#wrap #nav li{width:113px; cursor: pointer; text-align: center;}
+#wrap #nav li .menu_image{height:0; overflow: hidden;}
+#wrap #nav li .menu_image a{}
+#wrap #nav li .menu_image a img{height:97px;}
+#wrap #nav li .text_img{padding-top: 10px;}
+#wrap #nav li .text_img .off{display:block;}
+#wrap #nav li .text_img .off img{}
+#wrap #nav li .text_img .on{display:none;}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #div1{padding: 50px; background-color: turquoise; position: absolute; top: 0; left: 0; }
+        .ball{width: 50px; height: 50px; border-radius: 50%; position: absolute; }
+        .ball1{background-color: tomato; right: 0;}
+        .ball2{background-color: orange; bottom: 0;}
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(function () {
+            $('#div1').animate({left:500,top:500},3000);
+            $('.ball1').delay(2000).animate({right: 500},1000).animate({top:300},500)
+            $('.ball2').delay(2000).animate({left:500,bottom:500},3000)
+        })
+    </script>
+</head>
+<body>
+    <div id="div1">Box</div>
+    <div class="ball1 ball"></div>
+    <div class="ball2 ball"></div>
+
+</body>
+</html>

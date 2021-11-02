@@ -1,0 +1,69 @@
+*{margin: 0; padding: 0;}
+html, body{box-sizing: border-box; text-align: center;}
+.cf:after{content: ""; display: block; clear: both;}
+h1{font-size: 30px; text-align: center; color: rgb(149, 189, 8); margin-bottom: 50px; text-transform: uppercase;}
+#container{width: 1000px; margin: 0 auto; background-color: tomato;}
+.slide-wrap{ 
+    position: relative;
+    margin: auto; 
+    width: 400px;
+    padding-bottom: 30px;
+    
+}
+.slide-box{
+    width: 100%;
+    margin: auto;
+    overflow-x: hidden;
+    /* js에 slideList.insertBefore(cloneLast,slideList.firstElementChild); 이거 입력 후 확인용으로 잠깐 지워보기 */
+}
+/*js에 slideList.style.width=slideWidth * slideLen + "px";작성 후 다음 주석: .slide-list{width: 500%} */
+.slide-content{
+    width: 400px;
+    height: 400px;
+    float: left;
+    display: table;
+}
+.slide-content > p{
+    display: table-cell;
+    font-weight: bold;
+    color: #555;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 100px;
+}
+.slide01{background: wheat;}
+.slide02{background: rgb(72, 132, 221);}
+.slide03{background: rgb(59, 224, 224);}
+.slide04{background: rgb(245, 179, 242);}
+.slide05{background: rgb(240, 159, 93);}
+.slide-btn-box{}
+.slide-btn-box > button{
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 16px;
+    color: #999;
+    background: none;
+    border:1px solid #ddd;
+    cursor: pointer;
+    margin-top: -30px;
+}
+.slide-btn-box > .slide-btn-prev{left: -100px}
+.slide-btn-box > .slide-btn-next{right: -100px}
+.slide-pagination{
+    position: absolute;
+    left: 50%; bottom:0;  list-style: none; transform: translateX(-50%)
+}
+.slide-pagination .dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    overflow:hidden;
+    background: #ddd;
+    border-radius: 50%;
+    transition: .3s;
+}
+.slide-pagination .dot.dot_active{background: #333;}
+.slide-pagination .dot a{display: block; width: 100%; height: 100%}

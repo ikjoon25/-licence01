@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='loop.js'></script>
+    <style>
+        .blue{color:blue;}
+        .red{color:red;}
+        .green{color:green;}
+        .aqua{color:aqua;}
+    </style>
+    </script>
+</head>
+<body>
+    <h1>반복문</h1>
+    <h2>for</h2>
+    <ul id="for"></ul>
+    <hr>
+
+    <h2>forEach</h2>
+    <ul id="foreach"></ul>
+    <hr>
+
+    <h2>for in</h2>
+    <ul id="forin"></ul>
+    <hr>
+
+    <script>
+        var fruits=["cherry","apple","banner"];
+        //for
+        for(var i=0; i<fruits.length; i++){
+            document.getElementById('for').innerHTML +='<li>'+fruits[i]+'</li>';
+        }
+        //foreach 익스 11버전부터 사용가능
+        fruits.forEach(function(item,index){
+            document.getElementById('foreach').innerHTML +='<li>'+fruits[index]+'</li>';
+        });
+
+        //forof
+        var item;
+        for(item of fruits){
+            document.getElementById('forof').innerHTML +='<li>'+item+'</li>';
+        }
+
+        //for in 배열에서 사용 안함 객체내의 값들마다 할일
+        var person={pname:'장익준',page:'30', pgender:'남성'}
+        var x;
+        for(x in person){
+            document.getElementById('forin').innerHTML +='<li>'+x+":"+person[x]+'</li>';
+        }
+    </script>
+</body>
+</html>

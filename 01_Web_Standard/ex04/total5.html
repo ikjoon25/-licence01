@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{width:500px;}
+        fieldset{padding: 20px 50px; }
+        p{text-align: right;}
+        div{padding: 10px 0;}
+        div input{width:100%;}
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="#" method="post" name="form">
+        <fieldset>
+            <legend>로그인정보</legend>
+            <p>
+                <label for="ids">아이디</label>
+                <input type="text" id="ids" name="ids">
+            </p>
+            <p>
+                <label for="pws">비밀번호</label>
+                <input type="password" id="pws" name="pws">
+            </p>
+            <p>
+                <label for="pwss">비밀번호확인</label>
+                <input type="password" id="pwss" name="pwss">
+            </p>
+        </fieldset>
+        <form action="#" method="post" name="form">
+            <fieldset>
+                <legend>개인정보</legend>
+                <p>
+                    <label for="names">이름</label>
+                    <input type="text" id="names" name="names">
+                </p>
+                <p>
+                    <label for="emails">메일주소</label>
+                    <input type="email" id="emails" name="emails">
+                </p>
+                <p>
+                    <label for="phone">연락처</label>
+                    <input type="tel" id="phone" name="phone">
+                </p>
+                <p>
+                    <label for="blog">블로그/홈페이지</label>
+                    <input type="url" id="blog" name="blog">
+                </p>
+            </fieldset>
+            <div>
+                <input type="submit" value="가입하기" name="button">
+            </div>
+    </form>
+</body>
+</html>

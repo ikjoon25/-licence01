@@ -1,0 +1,17 @@
+*{margin: 0 auto; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: #222;}
+#gallery{width:350px; margin:30px auto; border: 5px solid rgb(233, 41,207)}
+#gallery h1{text-align: center;}
+/* 큰이미지 */
+#gallery #photo{}
+#gallery #photo img{}
+/* 작은이미지 */
+#gallery #photo_list{}
+#gallery #photo_list ul{}
+#gallery #photo_list ul li{}
+#gallery #photo_list ul li a{}
+#gallery #photo_list ul li a img{}
+#gallery .btn_wrap{}
+#gallery .btn_wrap #before_btn{}
+#gallery .btn_wrap #next_btn{}

@@ -1,0 +1,10 @@
+*{margin: 0; padding: 0;}
+.ani_box{width: 30px; height: 12px; margin: 100px; cursor: pointer;  position: relative;}
+.ani_box>div{width: 100%; height: 2px; background: #000; position: absolute;left:0; top: 0; transition: .5s;}
+.ani_box .line1{transform:rotate(0deg)}
+.ani_box .line2{opacity: 1; top: 50%;}
+.ani_box .line3{transform:rotate(0deg); top: 100%}
+
+.ani_box.add .line1{transform:rotate(-45deg); top: 50%}
+.ani_box.add .line2{opacity: 0; }
+.ani_box.add .line3{transform:rotate(45deg); top: 50%}

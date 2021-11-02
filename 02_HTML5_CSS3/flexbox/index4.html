@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex item 크기 변경</title>
+    <style>
+        .container{width:90%; margin:20px auto; height:500px; border:5px solid #ddd; display:flex; flex:1 1 0}
+        .container>div{width:500px; height:300px;}
+        .container>div:nth-child(1){background-color: chartreuse; flex-grow:1; flex-shrink: 1; flex-basis:300px;}
+        .container>div:nth-child(2){background-color: chocolate;flex-grow:1; flex-shrink: 1;}
+        .container>div:nth-child(3){background-color: cornflowerblue;flex-grow:1; flex-shrink: 1;}
+    </style>
+    <!-- flex-grow:기본값은0  1을쓰면 부모요소의 넓의만큼 비율을 맞춰준다 -->
+    <!-- flex-shrink: 기본값은 1 줄어들때 똑같은 비율로 줄어드나 0을쓰면 자기 넓이를 그대로 유지하면서 줄어든다  -->
+    <!-- flex-basis:기본값은 auto; -->
+</head>
+<body>
+    <div class="container">
+        <div>item1</div>
+        <div>item2</div>
+        <div>item3</div>
+    </div>
+</body>
+</html>

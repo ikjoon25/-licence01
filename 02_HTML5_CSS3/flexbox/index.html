@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexBox</title>
+    <style>
+        body{margin:100px;}
+        .container{width:1000px; 
+            height:100px; 
+            margin:0 auto; 
+            display:flex;  
+            background-color: blueviolet;
+            /* justify-content:flex-end ; 오른쪽끝으로*/
+            /* justify-content: center; 가운데로*/
+            /* justify-content: space-around; 양옆의 비율을 맞춰 일정한 간격으로 정렬  */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; ie11 이하에서 사용이 불가 앞과 중간 끝 일정 간격으로 정렬 */
+        }
+        /* 부모에게 디스플레이플렉스를 준다 그럼 아래 자식 요소가 자기의 넓이만큼 플롯레프트 정렬이 된다 */
+        /* max-width= 웹 사이즈를 줄이면 넓이가 이쁘게 줄어든다 반응형 만들떄 자주 사용 */
+        /* 특징 부모요소에게 높이값을 줘야한다 그래야 자식 요소들도 부모 높이값을 상속 받는다 */
+        /* flex-wrap: wrap 넓이를 유지하고 밑으로 떨어트리게하는거 */
+        /* norwap 줄바꿈하지마 */
+        .container>div{height:100%; border:1px solid red;padding:20px 20px; box-sizing: border-box;}
+        .container>div:nth-child(1){background-color: brown;}
+        .container>div:nth-child(2){background-color: rgb(42, 165, 69);}
+        .container>div:nth-child(3){background-color: rgb(74, 18, 202);}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>flex-item1</div>
+        <div>flex-item2</div>
+        <div>flex-item3</div>
+        
+    </div>
+</body>
+</html>

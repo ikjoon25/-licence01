@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{padding-left: 36px;}
+    </style>
+</head>
+<body>
+    <form action="#" method="post" name="form1">
+        <h1>프론트엔드 개발자 지원서</h1>
+        <p>Html, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다</p>
+        <hr>
+        <h4>개인정보</h4>
+        <div>
+            <label for="names">이름</label>
+            <input type="text" id="names" placeholder="공백 없이 입력하세요."> <br>
+            <label for="phones">연락처</label>
+            <input type="tel" id="phones">
+        </div>
+        <h4>지원분야</h4>
+        <div>
+            <input type="radio" name="radiobtn" id="radios">
+            <label for="radios">웹퍼블리싱</label> <br>
+            <input type="radio" name="radiobtn" id="radios">
+            <label for="radios">웹퍼블리싱</label> <br>
+            <input type="radio" name="radiobtn" id="radios">
+            <label for="radios">웹퍼블리싱</label> <br>
+        </div>
+        <h4>지원동기</h4>
+        <textarea name="texta" id="texta" cols="30" rows="10">
+            본사 지원 동기를 간략히 써주세요
+        </textarea> <br>
+        <input type="submit" vlaue="접수하기">
+        <button type="button">다시쓰기</button>
+    </form>
+    
+</body>
+</html>

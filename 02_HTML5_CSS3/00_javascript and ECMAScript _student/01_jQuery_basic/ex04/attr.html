@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin:100px; font-size:20px;}
+        #div1{border:3px solid #2e2e2e; padding:20px;}
+        #div2{border:3px solid #2e2e2e; padding:20px;}
+
+    </style>
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script>
+        $(function(){
+            $('#changeThis').attr('src','images/img2.gif');
+        });
+    </script>
+</head>
+<body>
+    <div id="imgWrap">
+        <img src="images/img1.gif" alt="">
+        <img src="images/img1.gif" alt="">
+        <img src="images/img3.gif" alt="" id="changeThis">
+        <img src="images/img4.gif" alt="">
+    </div>
+</body>
+</html>

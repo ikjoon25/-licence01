@@ -1,0 +1,8 @@
+*{margin:0; padding:0;}
+body{padding:10px; margin-top:100px;}
+#wrap{width:522px; margin:0 auto; text-align: center;}
+#wrap #nav{margin-bottom:10px}
+#wrap #nav ul{list-style: none; overflow:hidden;}
+#wrap #nav ul li{float:left; margin-left:10px; width:123px; height:40px;}
+#wrap #nav ul li#springBtn{margin-left:0;}
+#wrap #nav ul li a{display:block;}

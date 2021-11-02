@@ -1,0 +1,28 @@
+@charset "utf-8";
+body{margin-top: 80px;}
+
+#wrapper{
+    width: 224px;
+    margin: 0 auto;
+}
+#mainNav li{
+    width: 50px;
+    height:50px;
+    padding: 8px;
+    border-radius: 10px;
+    border: 2px solid #dbdbdb;
+    margin: 0 7px 7px 0;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    line-height: 50px;
+}
+#mainNav li:nth-child(2){background-image: url(../images/sanda3.png);}
+#mainNav li:nth-child(3){background-image: url(../images/neck3.png);}
+#mainNav li:nth-child(4){background-image: url(../images/bag3.png);}
+#mainNav li:nth-child(5){background-image: url(../images/top3.png);}
+#mainNav li:nth-child(6){background-image: url(../images/dress3.png);}
+#mainNav li:nth-child(7){background-image: url(../images/bottom3.png);}
+#mainNav li:nth-child(3n){margin-right: 0;}
+#mainNav li a{ font-size:.8em;}
+/* 넓이50 패딩16 보덜4 마진7 곱하기 3= 231-7=224  */

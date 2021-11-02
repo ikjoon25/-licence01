@@ -1,0 +1,562 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript 함수 정의하기</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="wrap">
+    <div class="article">
+        <H2>JavaScript 함수(function) 정의하기</H2>
+    </div>
+    <h3>함수(function) 정의하기</h3>
+    <p>-함수를 실행하려면 함수를 정의하고 정의된 함수를 실행해야 한다.<br>
+  -함수는 불러줘야 실행한다.</p>
+    <p>기본형식<br>
+    function 함수이름()<br>
+    {<br>
+   &nbsp;&nbsp;&nbsp;&nbsp; 문장<br>
+    }</p>
+    <p>&nbsp;</p>
+    <p>(사용예) 함수정의하고 사용하기</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        function love()
+        {
+            for(i=1;i&lt;=400;i++)
+            document.write(&quot;사랑해!&quot;)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        love()
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt; 
+&lt;/body&gt;
+</pre>
+
+
+<pre>&lt;script type=&quot;text/javascript&quot;&gt;
+<span class="green"></span> //&lt;![CDATA[
+    var num=1;
+    function nextGallery(){
+        num++;
+        if(num&gt;7) {num=1}
+        document.getElementById(&quot;gallery&quot;).src=&quot;img/img&quot;+num+&quot;.jpg&quot;;
+        return false;
+    }
+    function prevGallery(){
+        num--;
+        if(num&lt;1) {num=7}
+        document.getElementById(&quot;gallery&quot;).src=&quot;img/img&quot;+num+&quot;.jpg&quot;;
+        return false;
+    }
+ //]]&gt;
+<span class="green"></span>&lt;/script&gt;
+
+&lt;body&gt;
+	&lt;div id=&quot;galleryWrap&quot;&gt;
+	&lt;h1&gt;이미지 넘기기&lt;/h1&gt;
+	&lt;p&gt;
+		&lt;a href=&quot;#prev&quot; onclick=&quot;return prevGallery();&quot;&gt;&amp;lt&lt;/a&gt;
+		&lt;img src=&quot;img/img1.jpt&quot; alt=&quot;갤러리&quot; id=&quot;gallery&quot;  width=&quot;300&quot; height=&quot;200&quot; /&gt;
+		&lt;a href=&quot;#next&quot; onclick=&quot;return nextGallery();&quot;&gt;&amp;gt;&lt;/a&gt;
+	&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/body&gt;</pre>
+    <p>&nbsp;</p>
+    <p>(사용예) 함수의 매개변수 정의와 사용&nbsp;- 전달(인자)값이 있는 함수(매개 변수와 인자값이 동일하게 나열되어야 정확한전달이 가능)</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;script language=&quot;JavaScript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        function add(a,b)
+        {
+            var c  
+            c=a+b
+            document.write(c)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;script language=&quot;JavaScript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        m=3
+        n=4
+        document.write(m + &quot;+&quot; + n + &quot;=&quot;)
+        add(m,n)
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>함수에서 변수 사용할 때 주의할점p300</h3>
+    <p>var 변수 : 지역 변수로 정의함<br>
+    변수 : 전역 변수로 정의함</p>
+    (함수 바깥에 선언하거나 함수내에서 var 연산자를 붙이지 않고 선언합니다. 외ㅏ부에서 선언한 경우 var를 붙이지 않아도 실해에는 문제가 없으나, 좋지 않은 습관)</p>
+    <p>지역변수와 전역변수를 구분하는 이유=변수의 중복 사용을 막기 위해서.. 전역변수와 지역변수의 이름이 같다는 것만으로 오류가 발생하지는 않으며, 해당 함수 내에서는 지역변수가 우선 호출되며,프로그램이 복잡해질수록 깔끔한 실행을 위해서는 될수록 구분해주는 것이 좋음.</p>
+    <p>(사용예) 지역변수와 전역변수 설정</p>
+    
+<pre>
+&lt;head&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        function sdsd(a,b)
+        {
+            var c=a+b         <span class="green">// 지역변수 선언 c=30, var 지우고 다시 실행</span>
+            document.write(c)
+            document.write(&quot;&lt;br /&gt;&quot;)
+        }
+        
+        function sd()
+        {
+            d=c+2
+            document.write(d)
+        }
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script language=&quot;javascript&quot;&gt;
+    <span class="green">&lt;!--</span>
+        sdsd(10,20)
+        document.write(c+1)
+        document.write(&quot;&lt;br&gt;&quot;)
+        
+        sd()
+    <span class="green">//--&gt;</span>
+    &lt;/script&gt;
+&lt;/body&gt;
+</pre>
+<pre>    &lt;script language=&quot;javascript&quot;&gt; 
+    //&lt;![CDATA[
+        var i=10;
+       var num=20;
+
+        function theTest(){
+            var num=i+200;
+            alert(num); 
+        }
+       theTest();
+      function theFnc(){
+         document.write(num);
+      }
+    //]]&gt;
+&lt;/script&gt;
+</pre>
+<pre>
+	<h3>함수 선언 호이스팅(Function declaration hoisting) </h3>
+	함수 선언은 호이스팅이 됩니다. ([JavaScript] 유효범위(Scope)와 호이스팅(Hoisting) 참고)
+
+hoisted(); // logs "foo"
+
+function hoisted() {
+  console.log("foo");
+}
+
+<h3>함수 선언 호이스팅함수 선언 호이스팅</h3>
+
+
+알게 모르게 저희는 함수 선언 호이스팅을 사용하고 있었습니다.
+함수는 호출 먼저 하고, 함수 정의는 나중에 정의하는..
+
+
+하지만, 다음으로 이야기할 함수 표현은 호이스팅이 되지 않습니다.
+
+notHoisted(); // TypeError: notHoisted is not a function
+
+var notHoisted = function() {
+   console.log("bar");
+};
+
+함수 표현은 호이스팅이 되지 않는다함수 표현은 호이스팅이 되지 않는다
+
+
+호이스팅된 코드를 보면 이해하기 쉽습니다.
+
+var notHoisted;
+
+notHoisted(); // TypeError: notHoisted is not a function
+
+notHoisted = function() {
+   console.log("bar");
+};
+
+정의 되어 있지 않는 변수를 사용하려 하여 에러가 출력되는 것은 당연합니다.
+
+
+
+ <h2>함수 표현(Function expression)</h2>
+
+함수 표현(Function expression)을 MDS에서 밑에와 같이 정의 하였습니다.
+
+
+문법
+
+function [name]([param1[, param2[, ..., paramN]]]) {
+   statements
+}
+
+name
+
+The function name. Can be omitted, in which case the function is anonymous.
+The name is only local to the function body.
+
+
+paramN
+
+The name of an argument to be passed to the function.
+
+
+statements
+
+The statements which comprise the body of the function.
+
+
+<h3>익명 함수 표현 (Anonymous function expression)</h3>
+
+익명 함수 표현의 예를 들어보겠습니다.
+
+var x = function(y) {
+   return y * y;
+};
+console.log(x(2)); // 4
+
+익명 함수 표현익명 함수 표현
+
+
+<h3>기명 함수 표현 (Named function expression)</h3>
+
+기명 함수 표현의 예를 들어보겠습니다.
+
+var x = function square(y) {
+   return y * y;
+};
+console.log(x(2)); // 4
+
+기명 함수 표현기명 함수 표현
+
+
+여기서 저는 궁금한 점이 하나 생겼습니다. 기명 함수 표현으로 함수의 이름이 있다면 함수 이름으로 함수 실행이 가능 할까..?
+
+var x = function square(y) {
+   return y * y;
+};
+square(2);
+
+기명 함수 표현함수이름으로 함수 실행이 되지 않는다
+
+
+안됩니다.... 그렇다면, 왜 기명 함수 표현을 사용하는 걸까요?
+
+
+One of the benefit of creating a named function expression 
+is that in case we encounted an error,
+
+the stack trace will contain the name of the function,
+making it easier to find the origin of the error.
+
+
+MDS에서는, 장점 하나는 에러가 발생 했을 때, 
+stack trace가 함수의 이름을 포함하여 출력하기 때문에 에러를 찾기 쉬운 것이 기명 함수 표현의 장점이라고 이야기 함니다.
+
+
+MDS에서 함수 정의에 몇가지 방법을 더 이야기 하는데, 이번 포스팅에서 2가지만 이야기하겠습니다.
+
+(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions 참고)
+
+
+
+<h3>즉시 실행 함수 (Immediately-invoked function expression)</h3>
+
+
+즉시 실행 함수의 기본 형태는 아래와 같습니다.
+
+(function () {
+    // statements
+})()
+
+함수 표현(Function expression)은 함수를 정의하고, 변수에 함수를 저장하고 실행하는 과정을 거칩니다. 
+하지만 즉시 실행 함수는 함수를 정의하고 바로 실행하여 이러한 과정을 거치지 않는 특징이 있습니다. 
+함수를 정의하자마자 바로 호출하는 것을 즉시 실행 함수라고 이해하면 편할 것 같습니다.
+
+
+Immediately-invoked function expression 영어를 해석하면 즉시-호출 함수 표현 입니다. 
+즉시 실행 함수(IIFE)는 함수 표현(function expression)과 같이 익명 함수 표현, 기명 함수 표현으로 할 수 있습니다.
+
+
+
+1. 즉시 실행 함수 사용법
+기명 즉시 실행 함수
+
+(function square(x) {
+    console.log(x*x);
+})(2);
+
+(function square(x) {
+    console.log(x*x);
+}(2));
+
+위의 두가지 예는 괄호의 위치가 조금 다를 뿐 같은 기능의 즉시 실행 함수 입니다.
+
+
+익명 즉시 실행 함수
+
+(function (x) {
+    console.log(x*x);
+})(2);
+
+(function (x) {
+    console.log(x*x);
+}(2));
+
+
+변수에 즉시 실행 함수 저장
+
+즉시 실행 함수도 함수이기 때문에, 변수에 즉시 실행 함수 저장이 가능합니다. 예를 들어 보겠습니다.
+
+(mySquare = function (x) {
+    console.log(x*x);
+})(2);
+mySquare(3);
+
+변수에 즉시 실행 함수 저장변수에 즉시 실행 함수 저장
+
+
+함수를 mySquare에 저장하고 이 함수를 바로 실행하게 됩니다. 
+mySquare는 즉시 실행 함수를 저장하고 있기 때문에 재호출이 가능하게 됩니다.
+
+
+마찬가지로 즉시 실행 함수도 함수이기 때문에, 변수에 즉시 실행 함수의 리턴 값 저장도 가능합니다.
+
+var mySquare = (function (x) {
+    return x*x;
+})(2);
+console.log(mySquare)
+
+변수에 즉시실행함수 리턴값 저장변수에 즉시실행함수 리턴값 저장
+
+
+위의 두가지는 형태가 유사하지만 엄연히 다른 기능입니다. 괄호의 위치에 주의가 필요할 것 같습니다.
+
+
+
+2. 즉시 실행 함수를 사용하는 이유
+초기화
+
+즉시 실행 함수는 한 번의 실행만 필요로 하는 초기화 코드 부분에 많이 사용됩니다.
+
+그렇다면 왜 초기화 코드 부분에 많이 사용 할까요? 변수를 전역(global scope)으로 선언하는 것을 피하기 위해서 입니다. 
+전역에 변수를 추가하지 않아도 되기 때문에 코드 충돌 없이 구현 할 수 있어, 플러그인이나 라이브러리 등을 만들 때 많이 사용됩니다.
+
+
+예를 하나 들어보겠습니다.
+
+var initText;
+
+(function (number) {
+    var textList = ["is Odd Text", "is Even Text"];
+    if (number % 2 == 0) {
+        initText = textList[1];
+    } else {
+        initText = textList[0];
+    }
+})(5);
+
+console.log(initText);
+console.log(textList);
+
+즉시실행함수 이용한 초기화즉시실행함수 이용한 초기화
+
+
+
+전역에 textList가 저장되지 않고, initText만 초기화 된 것을 확인 할 수 있습니다. 
+또한 textList는 지역 변수로, 전역 변수와 충돌없이 초기화 할 수 있게 됩니다.
+
+
+라이브러리 전역 변수의 충돌
+
+jQuery나 Prototype 라이브러리는 동일한 $라는 전역 변수를 사용합니다. 만약, 
+이 두개의 라이브러리를 같이 사용한다면 $ 변수 충돌이 생기게 됩니다.
+
+즉시 실행 함수를 사용하여 $ 전역 변수의 충돌을 피할 수 있습니다.
+
+(function ($) {
+    // $ 는 jQuery object
+})(jQuery);
+
+즉시 실행 함수 안에서 $는 전역변수가 아닌 jQuery object의 지역 변수가 되어, P
+rototype 라이브러리의 $와 충돌 없이 사용할 수 있습니다.
+
+
+</pre>
+<pre>
+	<h2>Arrow Function - es6</h2>
+	const simplePrint= function(){
+	console.log('simplePrint!');
+	}
+	simplePrint();
+	<p>함수표현</p>
+	const simplePrint = () => console.log('simplePrint');
+	
+	simplePrint();
+	
+	const add = (a, b) => a+b;
+	const simpleMultiply =(a, b) => {
+		return a*b
+	};
+	
+	<p>Immediately Invoked Function Expression</p>
+	(function hello(){
+		console.log('IIFE');
+	})();
+	<p>함수 선언과 동시에 실행</p>
+	
+</pre>
+<pre>
+	<h2>유효범위(scope) -es6</h2>
+	<p>변수나 함수는 이름을 부여하여 의미를 갖게 됩니다. 만약 이름이 없다면, 변수나 함수는 그저 하나의 메노리 주소에 지나지 않습니다. 
+그래서 "이름: 값"의 대응표를 만들어 사용합니다. 이 대응표의 이름을 가지고 값을 저장하고 가져와 사용합니다. 
+이 대응표의 충돌을 막기 위해 유효범위( scope)라는 규칙을 만들어 사용하게 됩니다.
+	</p>
+	<h3>함수 레벨 스코프(function level scope)</h3>
+자바스크립트에서 var 키워드로 선언된 변수나, 함수 선언식으로 만들어진 함수는 함수 레벨 스코프를 갖습니다.
+ 즉 함수 내부 전체에서 유효한 값을 가지게 됩니다.
+
+function functionLevelScrop() {
+    if (true) {
+        var myScope = "function level scope";
+    }
+    console.log(myScope);
+}
+
+functionLevelScrop();
+
+코드 1 실행 결과에서 보시는 것 처럼 if 안에서 생성한 myScope가 console.log로 출력 되는 것을 확인 할 수 있습니다.
+
+만약 var myScope가 블록 레벨 스코프라면, if문이 끝날 때, myScope가 없어지고, console.log에서 에러가 발생할 것입니다. 
+하지만 var myScope는 함수 레벨 스코프이기 때문에 functionLevelScope 함수 내부 어디에서든 사용할 수 있습니다.
+<h3>블록 레벨 스코프 (Block Level Scope)</h3>
+ES6에서 let, const 키워드는 블록 레벨 스코프 변수를 만들어 줍니다. ([자바스크립트] ES6(ECMA Script 6) - let, const 참고)
+
+function blockLevelScrop() {
+    if (true) {
+        let myScope = "block level scope";
+        console.log(myScope);
+    }
+    console.log(myScope);
+}
+
+blockLevelScrop();
+let myScope를 if 문 안에 선언하였기 때문에, if 문 안 console.log로 값이 출력이 되지만, 
+if 문 밖에서는 console.log로 출력 하자 에러가 나타나는 것을 확인 할 수 있습니다.
+
+<h3>렉시컬 스코프 (Lexical Scope)</h3>
+렉시컬 스코프는 정적 스코프(static scope) 라고도 합니다.
+
+렉시컬 스코프는 소스코드가 작성된 그 문맥에서 결정됩니다. 예를 들어보겠습니다.
+
+var x = "global";
+
+function func1 () {
+    var x = 'local';
+    func2();
+}
+
+function func2() {
+    console.log(x);
+}
+
+func1();
+func2();
+var x를 window 영역에서 global로 선언되어 있습니다.
+
+func2()의 결과는 예상하신 대로 global이 출력됩니다. 그렇다면 func1()의 결과는 왜 global일 까요?
+이유는 렉시컬 스코프에 있습니다.
+
+x를 func1에서 local로 변경한 후, func2를 실행하면 func2는 x를 출력하게 됩니다.
+func2에서의 x는, 코드가 작성된 문맥에서 존재하지 않기 때문에, 상위 스코프에서 x를 찾게 되고(4. 중첩 스코프 참고), 
+결국 window 영역의 x를 출력하게 됩니다.
+
+
+<h3>호이스팅(Hoisting)</h3>
+호이스팅이란 변수의 정의가 그 스코프에 따라 선언과 할당으로 분리되는 것을 의미합니다.
+선언 부분이 해당 스코프의 최상위로 변경됩니다.
+
+
+예를 한가지 들어보겠습니다.
+
+function hoisting() {
+    hoistingText = "hoisting";
+    var hoistingText;
+    console.log(hoistingText);
+}
+hoisting();
+
+
+
+
+
+코드 4-1의 실행 결과는 호이스팅에 의해 hoisting이 정상적으로 출력 됩니다. 
+코드 4-1가 호이스팅에 다시 해석된 코드는 코드 4-2와 같습니다.
+
+function hoisting() {
+    var hoistingText;
+    hoistingText = "hoisting";
+    console.log(hoistingText);
+}
+hoisting();
+
+
+
+
+한가지 예를 더 들어 보겠습니다.
+
+function hoisting() {
+    console.log("1 : " + hoistingText );
+    var hoistingText = "hoisting";
+    console.log("2 : " + hoistingText);
+}
+hoisting();
+
+
+
+코드 4-3의 실행 결과는 1번째 로그는 undefined, 2번째 로그는 hoisting이 출력 됩니다. 
+호이스팅된 코드(코트 4-4)로 설명 드리겠습니다.
+
+function hoisting() {
+    var hoistingText;
+    console.log("1 : " + hoistingText );
+    hoistingText = "hoisting";
+    console.log("2 : " + hoistingText);
+}
+hoisting();
+
+
+
+호이스팅으로 var hoistingText의 선언이 최상위로 변경되기 때문에, 
+1번째 로그가 출력 될 때는 undefined가 2번째 로그는 hoisting이 할당되어, 
+hoisting이 출력되게 됩니다.
+
+
+
+
+</pre>
+
+</div>
+</body>
+</html>

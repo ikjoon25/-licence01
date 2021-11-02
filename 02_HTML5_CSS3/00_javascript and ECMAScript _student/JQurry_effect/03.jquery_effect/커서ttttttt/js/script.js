@@ -1,0 +1,1 @@
+$('body').css({cursor:'url(./icon.png), auto'})

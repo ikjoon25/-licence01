@@ -1,0 +1,10 @@
+*{margin:0; padding:0;}
+#wrap{width:487px; position:absolute; left:50%; margin-left:-234px;}
+ul{list-style: none; margin-top:140px; overflow: hidden; }
+ul li{float:left; height:25px; overflow: hidden; margin-right:6px;}
+ul li:last-child{ margin-right:0px;}
+ul li img{margin-top:0;}
+ul li .on img{margin-top:-25px;}
+.content{position:relative; width:487px; height:323px;}
+.content>div{position:absolute; top:0; left:0; width:455px; height:291px; margin-top:10px; background: #55aaaa; padding: 16px;}
+.content>div>img.on{cursor: pointer; opacity: .5;}

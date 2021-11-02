@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body{line-height: 200%; width:1000px; margin:100px auto;}
+        #basket{background-color: yellowgreen; padding: 10px;}
+        #apple{background-color: rgb(231, 27, 0); margin: 5px;}
+        #banana{background-color: rgb(255, 230, 0); margin: 5px;}
+        #orange{background-color: rgb(216, 162, 13); margin: 5px;}
+    </style>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        $(function () {
+            const basket=$('#basket');
+            const apple=$('#apple');
+            const banana=$('#banana');
+            const orange=$('#orange');
+
+            basket.append(apple)
+            basket.append(banana)
+            basket.append(orange)
+        });
+    </script>
+</head>
+<body>
+    <div id="basket">basket</div>
+    <div id="apple">apple</div>
+    <div id="banana">banana</div>
+    <div id="orange">orange</div>
+</body>
+</html>

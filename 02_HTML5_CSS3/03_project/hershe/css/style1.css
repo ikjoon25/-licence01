@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* 레이아웃 */
+#wrap{width:100%;}
+.line{}
+#header{width:100%; height:176px; background-color: blueviolet;}
+#banner{width:100%; height:554px; background-color: brown;}
+#contents{width:100%; height:1000px; background-color: burlywood;}
+#footer{width:100%; height:500px; background-color: cadetblue;}
+
+/* 공통속성 */
+.container{width:1350px; height:inherit; background-color: chartreuse; margin:0 auto; position:relative;}
+.row{padding:0 7px; box-sizing:border-box;}
+/* 헤더영역 */
+.logo{position:absolute; width:169px; height:176px; background:url(../img/logo.jpg) no-repeat; top:0; left:0;}
+.header-top{height:88px; width:100%; background-color: chocolate;}
+.header-top h2{width:330px;height:39px; background: url(../img/slogan.jpg) no-repeat; margin:30px 0 0 180px; float:left;}
+.header-top form{float:left; margin:30px 0 0 20px;}
+.header-top form .guideText{border:1px solid#bbb; width:200px; height:35px; padding:0 10px; float:left;}
+.header-top form .search-img{display:block; float:left;}
+.header-top .gnb{float:right;}
+.header-top .gnb li{float:left; padding:5px 0 0 10px;}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript Basic Selector</title>
+</head>
+<body>
+	<h1 id="title">javascript Basic Selector</h1>
+	<div class="container">
+		<ul id="list1" class="list">
+			<li>li 1</li>
+			<li>li 2</li>
+			<li>li 3</li>
+			<li>li 4</li>
+			<li>li 5</li>
+		</ul>
+	</div>
+	<div class="container">
+		<ul id="list2" class="list">
+			<li>li 1</li>
+			<li>li 2</li>
+			<li>li 3</li>
+			<li>li 4</li>
+			<li>li 5</li>
+		</ul>
+	</div>
+	<div class="container">
+		<ul id="list3" class="list">
+			<li class="red" name="red">li 1</li>
+			<li>li 2</li>
+			<li>li 3</li>
+			<li>li 4</li>
+			<li id="list3_5">li 5</li>
+			<li>li 6</li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div id="box">
+			box level1
+			<div>
+				box level2
+				<div>
+					box level3
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil id, corporis, blanditiis quam dicta amet quidem eum impedit harum consequuntur aspernatur ratione nostrum vel culpa fuga! Dolore quibusdam nisi temporibus!
+	</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil id, corporis, blanditiis quam dicta amet quidem eum impedit harum consequuntur aspernatur ratione nostrum vel culpa fuga! Dolore quibusdam nisi temporibus!
+	</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil id, corporis, blanditiis quam dicta amet quidem eum impedit harum consequuntur aspernatur ratione nostrum vel culpa fuga! Dolore quibusdam nisi temporibus!
+	</p>
+  
+  <script>
+		//html문서는 document태그 선택 
+		var firstTitle=document.getElementById('title');
+		firstTitle.style.color='red';
+		var myList=document.getElementsByClassName('list');
+		var para=document.getElementsByTagName('p');
+		var myList2=document.querySelector('.list .red');
+
+
+
+		myList[0].style.color="blue";
+		myList[1].style.color="green";
+/* 		para[0].style.backgroundColor="yellow";
+		para[1].style.backgroundColor="yellow";
+		para[2].style.backgroundColor="yellow"; */
+
+		myList2.style.backgroundColor='red';
+		for(var i=0; i<=para.length; i++){
+			para[i].style.backgroundColor="yellow";
+		}
+
+		
+  </script>
+
+</body>
+</html>

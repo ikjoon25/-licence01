@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin:100px; font-size:20px;}
+        #div1{border:3px solid #2e2e2e; padding:20px;}
+        #div2{border:3px solid #2e2e2e; padding:20px;}
+
+    </style>
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script>
+        $(function(){
+            $('#div1').empty();//비우다
+            $('#div2').remove();//지우다
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">div 넣고 싶은 텍스트</div>
+    <div id="div2">div 넣고 싶은 텍스트</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+*{box-sizing: border-box;}
+body{
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.container{
+    background-color: #fff;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    form{
+        .ui-widget1{margin-bottom: 20px;
+            label{display: block; font-weight: bold;}
+            
+        }
+        fieldset .ui-widget{margin-bottom: 0;}
+        .ui-selectmenu-button.ui-button {
+            text-align: left;
+            white-space: nowrap;
+            width: 100%;
+        }
+        #category.ui-button, #startDate.ui-button{
+            width: 100%;
+            background: none;
+        }
+        fieldset{margin-bottom: 20px; }
+        #submit{width: 100%; padding: 10px 0;}
+        
+    }
+    h1{text-align: center;}
+    #progress{position: relative; height: 32px;
+        .pct{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            line-height: 32px;
+            font-size: 12px;
+            color: #444;
+        }
+    }
+}

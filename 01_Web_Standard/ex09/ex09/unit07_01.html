@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<title>해상도 크기에 따라 디자인 다르게 설정하기 </title>
+	<meta charset="UTF-8" />
+	<style type="text/css">		
+		body{
+			background:url(./images/pattern.png);
+		}
+		h1 span{
+			display: none;
+		}
+		.btn{
+			background:black;
+			color:#fff;
+			border:none;
+			}
+		div{
+			text-align: right;
+		}
+		/* 최소 320부터 최대 799넓이까지  노리핏 반복하지말고 센터및 맨 위로 가 */
+		@media screen and (min-width: 320px) and (max-width: 799px) {
+			h1{background: url(./images/mediaQuery1.png) no-repeat center top;
+			height:295px;
+			}
+			.btn{
+				border-radius: 5px;
+				padding:5px 10px;
+				font-size: 1.1em;
+			}
+		}
+			@media screen and (min-width: 800px) and (max-width: 1024px) {
+			h1{background: url(./images/mediaQuery2.png) no-repeat center top;
+			height:500px;
+			}
+			.btn{
+				border-radius: 10px;
+				padding:10px 20px;
+				font-size: 2.2em;
+			}
+		}
+			/* 1025부터 나머지 전부다 해상도가 얼마나 큰지 모르겠지만 끝까지 표현해 */
+			@media screen and (min-width: 1025px) {
+				h1{background: url(./images/mediaQuery3.png) no-repeat center top;
+					height:700px;
+			}
+			.btn{
+				border-radius: 5px;
+				padding:5px 10px;
+				font-size: 1.1em;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1><span>What is Responsive Web Design?</span></h1>
+	<div>
+		<input type="button" value="Learn More" class="btn" />
+	</div>
+</body>
+</html>

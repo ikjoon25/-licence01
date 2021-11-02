@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{width:100%; height:100vh; display:flex; }
+        /* align-items: stretch;기본값 */
+        /* align-items:center 가운데정렬 */
+        /* align-items:flex-end 아래로정렬 */
+        /* align-items:baseline 글자 폰트의 크기에 맞춰 높이 정렬 */
+
+
+        /* align-self: flex-end; 나만 다른위치로 가고싶어 */
+        /* align-self:center; 나만 가운데 위치로 가고싶어 */
+        .container>div:nth-child(1){width:300px; height:400px; background-color: brown; font-size: 30px; align-self: flex-end;}
+        .container>div:nth-child(2){width:200px; height:600px; background-color: rgb(108, 165, 42); font-size: 50px; align-self:center;}
+        .container>div:nth-child(3){width:500px; height:500px; background-color: rgb(42, 147, 165); font-size: 30px;}
+        .container>div:nth-child(4){width:400px; height:400px; background-color: rgb(165, 42, 114); font-size: 60px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>item1</div>
+        <div>item2</div>
+        <div>item3</div>
+        <div>item4</div>
+    </div>
+</body>
+</html>

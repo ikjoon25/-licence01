@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <style>
+         *{margin: 0; padding: 0;}
+         body {line-height:200%; width:1000px; margin:100px auto; }
+        div{ background-color: darkseagreen;padding:20px;}
+        .activ {border: 3px solid rgb(2, 255, 128);}
+        
+        
+     </style>
+    <script src="./js/jquery.2.2.4.min.js"></script>
+    <script>
+        $(function(){
+            $('#div1').mouseover(function () {
+                $('#div1').text("마우스 내려");
+            })    //on=이벤트 한번에 여러개 줄때 사용
+            $('#div1').mouseout(function () {
+                $('#div1').text("쨔란다쨔란다");
+            });
+            $('#input1').focus(function(){
+                $('#input1').removeClass('active')
+            });
+            $('#input1').blur(function(){
+                $('#input1').removeClass('active')
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="div1">마우스를 올려보세요</div>
+    <input type="text" id="input1">
+
+    </div>
+</body>

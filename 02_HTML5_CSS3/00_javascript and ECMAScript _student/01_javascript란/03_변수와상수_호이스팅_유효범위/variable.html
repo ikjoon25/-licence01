@@ -1,0 +1,200 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript 변수와 상수 호이스팅 함수의 유효범위 스코프</title>
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div id="wrap">
+	 <div class="article">
+        <h2>변수와 상수</h2>
+		<h3>const 상수를_지칭하는 이름</h3>
+		<div class="box">
+			<ul>
+				<li>const 상수를_지칭하는_이름 = 값;</li>
+				<li>상수를 선언하면서 바로 값을 할당하는 방법</li>
+			</ul>
+			<ul>
+				<li>let변수를_지칭하는_이름</li>
+				<li>변수를 선언하는 방법 </li>
+			</ul>
+		</div>	
+		
+		<h2>호이스팅</h2>
+		<h3>아래있는 선언(만)을 끌어올리다.</h3>
+		<div class="box">
+			<ul>
+				<li>함수 호이스팅</li>
+			</ul>
+			<ul>
+				<li>변수 호이스팅</li>
+				<li>
+					var name;
+					console.log(name);
+					name='mark';
+					console.log(name);
+					name='Woongjae'
+				</li>
+				<li>{}안에서만 사용가는한 범위</li>
+			</ul>
+			
+			<pre>
+				//블럭
+				//const name='mark';
+			</pre>
+			<ul>
+				<li>var의 유효 범위</li>
+				<li>함수 스코프</li>
+			</ul>
+		</div>	
+		<pre>
+		<span class="green">//함수 먼저</span>
+		
+		function hello1(){
+			console.log('hello1');
+		}
+		hello1();
+		
+		<span class="green">//함수의 호출을 먼저</span>
+		hello2();
+		function hello2(){
+			console.log('hello2');
+		}
+		
+		<span class="green">//둘다 실행됨</span>
+		
+		<span class="green">//var 호이스팅</span>
+		age=6;
+		age++;
+		console.log(age);
+		var age;
+		
+		
+		<span class="green">-- ------------- </span>
+		console.log(name);<span class="green">//undefined</span>
+		name='Mark';
+		console.log(name);<span class="green">//mark;</span>
+		
+		var name;
+		
+		<span class="green">-----------</span>
+		console.log(name);<span class="green">//undefined</span>
+		name='Mark';
+		console.log(name);<span class="green">//mark;</span>
+		
+		var name='jeehyun'; <span class="green">// 변수 선언만 끌어 올림 이름을 나타내지 못함</span>
+		
+		<span class="green">------------let를 선언하면  호이스팅 문제가 사라짐</span>
+    </div>
+	 <div class="article">
+        <h2>JavaScript 스크립트 구조와 변수</h2>
+    </div>
+    <h3>JavaScript 스크립트 구조와 변수</h3>
+<pre>&lt;script language=&quot;JavaScript&quot;&gt;
+     <span class="green">&lt;!--</span>
+    <span class="green">//만든이 : 조지현</span>
+    <span class="green">/* email : cjh7652@hanmail.net
+    homepage : http://www.cjh7652.dothome.co.kr/  */ </span>
+
+    document.write(&quot;안녕하세요.&quot;)
+    document.write(&quot;&lt;br&gt;&quot;)
+    document.write(&quot;여러분&quot;)
+    <span class="green">//--&gt;</span>
+&lt;/script&gt;
+
+
+</pre>
+
+
+
+    <p>&nbsp;</p>
+    <h3>변수(variable) 정의하기</h3>
+    <p>잘된 사용예<br>
+        thing=10<br>
+        document.write(thing)</p>
+    <p>잘못된 사용예<br>
+        this=10<br>
+        document.write(this)</p>
+        
+    <p>
+		--변수란? 변하는 데이터(값)를 저장 할 수 있는 메모리 공간 <br />
+		var은 변수를 선언 <br/>
+		변수에 저장할 수 있는 데이터형(문자형 데이터, 숫자형 데이터, 논리형 데이터,Null & Undefined데이터-null은 데이터를 비우고자 할 때 사용하는 값) <br />
+		변수명은 영문,숫자, 일부특수문자($,_)만 포함 <br />
+		변수명 첫 글자로는 $,_,영문자만 올수 있음 <br />
+		한글을 사용할수 없음 <br />
+		의미에 맞는 이름 <br />
+		소문자로 시작 <br />
+		기본 this, with(상수), document,window,screen, location등등 자바스크립트에서 사용하는 단어(예약어)를 사용할수 없음 <br/>
+		변수를 쓰는 이유는 코드의 재활용성을 높여준다.  (좋은 코드를 작성하는 것에 있어서 가장 중요한 키워드임. )
+	</p>    
+        
+    <p>&nbsp;</p>
+    <h3>문자변수와 숫자변수 (var은 지역변수임)</h3>
+    <p>var x,y<br>
+        x=7+5<br>
+        y=&quot;7&quot;+5<br>
+        document.write(x)<br>
+        document.write(&quot;&lt;br/&gt;&quot;)<br>
+        document.write(y)</p>
+        
+    <p>
+		문자형 데이터(String)____ var 변수명="사용할 문자나 숫자"<br />
+		숫자형 데이터(Number)____ var 변수명=숫자; 또는 Number("숫자"); <br />
+		논리형 데이터(Boolean)____ var 변수명=true or false; 또는 Boolean(0):false;
+		비워진 데이터(Null& Undefined)___값이 등록되지 않은 경우 Undefined <br />
+		typeof는 데이터형을 알아볼수 있음
+	</p>    
+        
+    <p>&nbsp;</p>
+    <h3>10진수로 숫자변수 나타내기</h3>
+    <p>var x,y<br>
+        x=1230000<br>
+        y=1.23E6<br>
+        document.write(x)<br>
+        document.write(&quot;&lt;br/&gt;&quot;)<br>
+        document.write(y)</p>
+        
+        
+        
+    <p>&nbsp;</p>
+    <h3>문자변수 나타내기</h3>
+    <p>var x,y,z<br>
+        x=&quot;MY BIRTH DAY&quot;<br>
+        y=&quot;11&quot;<br>
+        z=&quot;월 입니다.&quot;<br>
+        document.write(x)<br>
+        document.write(y)<br>
+        document.write(z)</p>
+        
+     <p>&nbsp;</p>
+    <h3>변수가 없다면</h3>
+    <p>
+		alert(100+10);<br>
+		alert(100+10)/10;<br>
+		alert(100+10)/10)-10);<br>
+		alert(100+10)/10)-10)*10);<br>
+		100이라는 숫자를 1000으로 변경해야 한다면.. <br/><br/><br/>
+		
+		a=100; <br/>
+		a=a+10; <br/>
+		alert(a); <br/>
+		a=a/10; <br/>
+		alert(a) <br/>
+		a=a-10 <br/>
+		alert(a) <br/>
+		a=a*10 <br/>
+		alert(a) <br/>
+		
+        유지보수하기 쉬워진다.
+    </p>   
+        
+    <p>&nbsp;</p>
+    <h3>참, 거짓 변수</h3>
+    <p>a=false<br>
+        document.write(a)</p>
+    <p class="green">// <strong>FALSE</strong>는 <strong>0</strong>, <strong>TRUE</strong> 는 <strong>1</strong></p>  
+</div>
+</body>
+</html>

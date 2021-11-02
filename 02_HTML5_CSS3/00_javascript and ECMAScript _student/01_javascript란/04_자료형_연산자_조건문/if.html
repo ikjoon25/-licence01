@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if /else /else if</title>
+    <script>
+        // var walkAmount=prompt("당신의 하루 걷는 양은 몇 보인가요?",""); //prompt 묻고답하는 질문형
+        // if(walkAmount>10000){
+        //     document.write("매우 좋은 습관을 지니고 계시는군요!!","<br>")
+        // }
+        // document.write("TEH END","<br>");
+
+        // var num=0;
+        // if(num){
+        //     document.write(num)
+        // }
+
+        // var userName=prompt("방문자의 이름은?","");
+        // if(userName){
+        //     // document.write(userName+"님 반갑습니다.");        //+문자랑 연결할때 사용 둘중하나 사용
+        //     document.write(`${userName}님 반갑습니다.);
+        // }
+            /* var num=prompt("당신이 좋아하는 숫자는?","");
+            if(num % 2 == 0){
+                document.write("당신이 좋아하는 숫자는 짝수입니다.")
+            }else{
+                document.write("당신이 좋아하는 숫자는 홀수입니다.")
+            } */
+            
+            /* var result=confirm("정말 회원을 탈퇴하시겠습니까?");
+
+            if(result){
+                document.write("탈퇴 처리되었습니다.")
+            }else{
+                document.write("취소 되었습니다.")
+            } */
+
+            /* var mon=prompt("현재는 몇 월 입니까?","0");   //여러가지 조건문을 사용할떄는 else if를 사용
+
+            if(mon>=9 && mon<=11){
+                document.write("독서의 계절 가을이네요.");
+            }else if(mon>=6 && mon<=8){
+                document.write("여행가기 좋은 여름이네요.");
+            }else if(mon>=3 && mon<=5){
+                document.write("햇살 가득한 봄이네요");
+            }else{
+                document.write("스키의 계절 겨울이네요");
+            } */
+
+            //중첩 if문 
+
+            var id="easy1004";
+            var pw="112233";
+
+            var user_id=prompt("아이디?","");
+            var user_pw=prompt("비밀번호","");
+
+            if(id==user_id){
+                if(pw==user_pw){
+                    document.write(`${user_id} 님 반갑습니다.`);
+                }else{
+                    alert("비밀번호가 일치하지 않습니다.");
+                        location.reload();
+                }
+            }else{
+                alert("아이디가 일치하지 않습니다.");
+                location.reload();
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

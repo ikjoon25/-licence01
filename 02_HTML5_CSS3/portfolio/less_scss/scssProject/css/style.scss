@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+*{margin:0; padding: 0; box-sizing: border-box;}
+html{font-size: 62.5%;}
+body{padding: 3rem; font-family: 'Nanum Gothic', sans-serif;}
+.ir_so{width: 0; height: 0; line-height: 0; overflow: hidden; text-indent: -9999em;}
+
+// 변수
+$color-primary:#285a91;
+$color-secondary:#1f9cfd;
+$color-white:#fff;
+
+$color-blue-1:#a8d8ff;
+$color-blue-2:#c1e1ff;
+$color-blue-3:#d2e6f3;
+$color-blue-dark:#3f4a56;
+
+$color-grey-light:#b9b9b9;
+$color-grey-dark:#474747;
+
+//mixin
+@mixin clearfix(){
+    &::after{
+        content: '';
+        display: block;
+        clear:both;
+    }
+}
+@mixin mq($screen-width){
+    @if ($screen-width == 'small-screen-1'){
+        @media screen and (min-width: 900px) and (max-width:1200px) {
+            @content;
+        }
+    }
+    @else if ($screen-width == 'small-screen-2'){
+        @media screen and (min-width: 701px) and (max-width:899px) {
+            @content;
+        }
+    }
+    @else if ($screen-width == 'small-screen-3'){
+        @media screen and (max-width:700px) {
+            @content;
+        }
+    }
+}
+
+//애니메이션
+@keyframes moveInLeft {
+    0%{opacity: .1; transform:translateX(-8rem)}
+    80%{transform:translateX(1rem)}
+    100%{opacity: 1; transform:translateX(0)}
+}
+@keyframes moveInRight {
+    0%{opacity: .1; transform:translateX(10rem)}
+    80%{transform:translateX(-1rem)}
+    100%{opacity: 1; transform:translateX(0)}
+}
+
+h2{
+    padding: 1rem 0;
+    font-size: 2.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: linear-gradient(left, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    transition: all .5s;
+    &:hover{padding-left: 1.5rem;}
+}
+h3{
+    padding: .5rem 0;
+    color: $color-grey-dark;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+header{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(to right, $color-primary 0%, $color-secondary 100%), url(../images/header-image.jpg);
+    background-blend-mode:multiply;
+    background-size: cover;
+    position: relative;
+
+    #logo-text{
+        position: absolute;
+        left: 7rem;
+        top: 4rem;
+        font-size: 5.6rem;
+        text-transform: uppercase;
+        font-weight: 100;
+        color:$color-white;
+        letter-spacing: -0.1rem;
+        animation-name:moveInLeft;
+        animation-duration: 1s;
+        animation-iteration-count: 5;
+        animation-delay: 2s;
+        animation-fill-mode: backwards;
+    }
+    #header-text{
+        position: absolute;
+        left: 7rem;
+        bottom: 23%;
+        color: $color-white;
+        letter-spacing: -.1rem;
+        font-weight: 700;
+        &-main{
+            font-size: 7.2rem;
+            line-height: 7.2rem;
+            animation-name:moveInRight;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-fill-mode: backwards;
+        }
+        &-sub{
+            margin-top: 3rem;
+            font-size: 2.4rem;
+            animation-name:moveInLeft;
+            animation-duration: 1s;
+            animation-delay: 1.5s;
+            animation-fill-mode: backwards;
+        }
+    }
+}
+.nav{
+    &-checkbox{display: none;}
+    &-button{
+        background-color: #c4e3ff;
+        width: 7rem;
+        height: 6rem;
+        position: fixed;
+        top: 7rem;
+        right: 8rem;
+        z-index: 20000;
+        cursor: pointer;
+        border-radius: 2px;
+        box-shadow: 0 1rem 1rem rgba(#000, .1);
+        text-align: center;
+    }
+    &-bg{
+        background-image: radial-gradient($color-primary, $color-secondary);
+        width: 7rem;
+        height: 6rem;
+        position: fixed;
+        top: 7rem;
+        right: 8rem;
+        z-index: 1000;
+        border-radius: 2px;
+        transition: all .8s;
+    }
+    &-checkbox:checked ~ &-bg{
+        transform: scale(80)
+    }
+    &-icon{
+        position: relative;
+        margin-top: 3rem;
+
+        &::before{top: -.8rem}
+        &::after{top: .8rem}
+        &::before, &::after{
+            content: '';
+            position: absolute;
+            left:0;
+            transition: all .2s;
+        }
+       &, &::before, &::after{
+           width: 3rem;
+           height: 2px;
+           background-color: #333;
+           display: inline-block;
+       }
+    }
+    &-button:hover &-icon::before{
+        top: -1rem;
+    }
+    &-button:hover &-icon::after{
+        top: 1rem;
+    }
+    &-checkbox:checked ~ &-button &-icon{
+        background-color: transparent;
+    }
+    &-checkbox:checked ~ &-button &-icon::before{
+        top:0;
+        transform: rotate(135deg);
+    }
+    &-checkbox:checked ~ &-button &-icon::after{
+        top:0;
+        transform: rotate(-135deg);
+    }
+    &-body{
+        position: fixed;
+        top: 0;
+        left: -120%;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1500;
+        opacity: 0;
+        transition: all .8s;
+    }
+    &-list{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        list-style: none;
+        width: 100%;
+        text-align: center;
+        z-index: 2000;
+       
+    }
+    &-link{
+        font-size: 3rem;
+        display: inline-block;
+        font-weight: 300;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all .4s;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+        background-size: 220%;
+        &:hover{
+            color:$color-primary;
+            background-position: 100%;
+            transform: translateX(1rem);
+        }
+        span{
+            display: inline-block;
+            margin-right: 1.5rem;
+        }
+    }
+    &-checkbox:checked ~ &-body{
+        opacity: 1;
+        left:0
+    }
+}
+main{
+    @include clearfix();
+
+    #section-about{float: left;
+        background-color: #ededed;
+        padding: 7rem 0 6.5rem 6rem;
+        width: 66.66666%;
+        min-height: 42rem;
+        @include clearfix();
+        @include mq('small-screen-1'){
+            width: 100%;
+        }
+        @include mq('small-screen-2'){
+            width: 100%;
+            height: 54rem;
+            padding: 7rem 6rem 6.5rem 6rem;
+        }
+        @include mq('small-screen-3'){
+            width: 100%;
+            height:60rem;
+            padding: 7rem 6rem 6.5rem 6rem;
+        }
+        &-words{float: left;
+            width: 65%;
+            padding: 2rem 2rem 0 0;
+            @include mq('small-screen-2'){
+                width: 100%
+            }
+            @include mq('small-screen-3'){
+                width: 100%
+            }
+            p{
+                padding: 1.5rem 0;
+                font-size: 1.4rem;
+                font-weight: 700;
+                text-align: justify;
+            }
+            .btn-text{
+                font-size: 1.6rem;
+                font-weight: 700;
+                text-decoration: none;
+                color:$color-primary;
+                display: inline-block;
+                padding-bottom: 3px;
+                border-bottom: 1px solid $color-primary;
+                transition: all .5s;
+                &:hover{
+                    color: $color-white;
+                    background-color: $color-secondary;
+                    border-bottom: none;
+                }
+            }
+        }
+        &-photo{float: left;
+            width: 35%;
+            position: relative;
+            @include mq('small-screen-2'){
+                width: 100%
+            }
+            @include mq('small-screen-3'){
+                width: 100%
+            }
+            .photo{
+                position: absolute;
+                width: 18rem;
+                height: 12rem;
+                transition: all .5s;
+                @include mq('small-screen-2'){
+                   top: 3rem !important;
+                   left: 50% !important;
+                }
+                @include mq('small-screen-3'){
+                   top: 3rem !important;
+                   left: 50% !important;
+                }
+                &:hover{
+                    transform:scale(1.1);
+                    padding: 1rem;
+                    border: 3px solid $color-primary;
+                    z-index: 10;
+                }
+                &:nth-child(1){
+                    left: 1rem;
+                    top: 3rem;
+                    @include mq('small-screen-2'){
+                        transform: translateX(-120%);
+                    }
+                    @include mq('small-screen-3'){
+                        transform: translateX(-120%);
+                    }
+                }
+                &:nth-child(2){
+                    left:6rem;
+                    top: 10rem;
+                }
+                img{width:100%; height: 100%; box-shadow: 3px 3px 9px rgba(0,0,0,.5);}
+            }
+        }
+    }
+    #section-etc{float: left;
+        width: 33.33334%;
+        @include mq('small-screen-1'){
+            width: 100%;
+        }
+        @include mq('small-screen-2'){
+            width: 100%;
+        }
+        @include mq('small-screen-3'){
+            width: 100%;
+        }
+        [id^="etc-"]{
+            height: 14rem;
+        }
+        .etc{
+            @include mq('small-screen-1'){
+                width: 33.33333%;
+                float: left;
+            }
+            @include mq('small-screen-2'){
+                width: 33.33333%;
+                height: 22rem;
+                float: left;
+            }
+            &:nth-child(1){
+                background-color: $color-blue-1;
+            }
+            &:nth-child(2){
+                background-color: $color-blue-2;
+            }
+            &:nth-child(3){
+                background-color: $color-blue-3;
+            }
+
+            .etc-icon{
+                padding-top:3.5rem;
+                width:30%;
+                text-align: center;
+                float:left;
+                span{
+                    font-size:6rem;
+                }
+            }
+            .etc-text{
+                padding-top: 1rem;
+                width:70%;
+                float:left;
+                p{
+                    margin:.5rem 0;
+                    padding-right:3.5rem;
+                    text-align: justify;
+                    font-size:1.4rem;
+                }
+            }
+        }
+    }
+}
+
+

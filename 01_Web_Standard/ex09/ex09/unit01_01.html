@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> 그라데이션 상자와 회원 가입 버튼 만들기 </title>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			body, button { 
+				font-family: "맑은 고딕", 돋움, sans-serif; 
+				}
+			body{
+				height:100vh;
+				background:blueviolet;
+				background:-webkit-linear-gradient(top,blueviolet,red);
+				background:-moz-linear-gradient(top,blueviolet,white);
+				background:-o-linear-gradient(top,blueviolet,white);
+				background:linear-gradient(top,blueviolet,white);
+			}
+			#memberBox{
+				width:400px;
+				background:#fff;
+				background:linear-gradient(45deg,rgb(255, 12, 146),#fff);
+				margin:0 auto;
+				text-align: center;
+				padding:50px;
+			}
+			.btnOrange{
+				padding:5px 10px;
+				cursor:pointer;
+				border:none;
+				/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#cb60b3+0,17d365+47,f74fb9+100 */
+				background: #cb60b3; /* Old browsers */
+				background: -moz-linear-gradient(top,  #cb60b3 0%, #17d365 47%, #f74fb9 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top,  #cb60b3 0%,#17d365 47%,#f74fb9 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom,  #cb60b3 0%,#17d365 47%,#f74fb9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#f74fb9',GradientType=0 ); /* IE6-9 */
+				box-shadow: 5px 5px 5px #000;
+
+			}
+			.radial1{
+				float:left;
+				width:500px;
+				height:500px;
+				background:chartreuse;
+				background:-webkit-radial-gradient(30% 40%,circle closest-side,white,yellow,green);
+				background:-moz-radial-gradient(30% 40%,circle closest-side,white,yellow,green);
+				background:-o-radial-gradient(30% 40%,circle closest-side,white,yellow,green);
+			}
+			.radial2{
+				float:left;
+				width:500px;
+				height:500px;
+				background:chartreuse;
+				background:-webkit-radial-gradient(30% 40%,circle closest-corner,white,yellow,green);
+				background:-moz-radial-gradient(30% 40%,circle closest-corner,white,yellow,green);
+				background:-o-radial-gradient(30% 40%,circle closest-corner,white,yellow,green);
+			}
+			.radial3{
+				float:left;
+				width:500px;
+				height:500px;
+				background:chartreuse;
+				background:-webkit-radial-gradient(30% 40%,circle farthest-side,white,yellow,green);
+				background:-moz-radial-gradient(30% 40%,circle farthest-side,white,yellow,green);
+				background:-o-radial-gradient(30% 40%,circle farthest-side,white,yellow,green);
+			}
+			.radial4{
+				float:left;
+				width:500px;
+				height:500px;
+				background:chartreuse;
+				background:-webkit-radial-gradient(30% 40%,circle farthest-corner,white,yellow,green);
+				background:-moz-radial-gradient(30% 40%,circle farthest-corner,white,yellow,green);
+				background:-o-radial-gradient(30% 40%,circle farthest-corner,white,yellow,green);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="memberBox">
+			<p>아직 infoPub 회원이 아니세요? </p>
+			<button class="btnOrange">회원 가입 하기</button>
+		</div>
+		<div class="radial1"></div>
+		<div class="radial2"></div>
+		<div class="radial3"></div>
+		<div class="radial4"></div>
+	</body>
+</html>

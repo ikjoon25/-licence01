@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: #fff;
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.container form .ui-widget1 {
+  margin-bottom: 20px;
+}
+.container form .ui-widget1 label {
+  display: block;
+  font-weight: bold;
+}
+.container form fieldset .ui-widget {
+  margin-bottom: 0;
+}
+.container form .ui-selectmenu-button.ui-button {
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+}
+.container form #category.ui-button, .container form #startDate.ui-button {
+  width: 100%;
+  background: none;
+}
+.container form fieldset {
+  margin-bottom: 20px;
+}
+.container form #submit {
+  width: 100%;
+  padding: 10px 0;
+}
+.container h1 {
+  text-align: center;
+}
+.container #progress {
+  position: relative;
+  height: 32px;
+}
+.container #progress .pct {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 32px;
+  font-size: 12px;
+  color: #444;
+}/*# sourceMappingURL=style.css.map */

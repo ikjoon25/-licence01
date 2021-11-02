@@ -1,0 +1,30 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+
+#wrap{width:100%;}
+#stories{width:100%; background:#edecec;}
+#stories .selected-stories{}
+#stories .selected-stories .container{}
+#stories .selected-stories .container .stories-body{
+    width:100%; height:600px; position:relative; 
+}
+#stories .selected-stories .container .stories-body .contents{
+    width:22%; height:auto; float:left; background:#fff; position:absolute; transition:transform 1s; box-shadow: 0 0 5px #d0d0d0;
+}
+#stories .selected-stories .container .stories-body .contents .con-img{}
+#stories .selected-stories .container .stories-body .contents .con-img img{width:100%;}
+#stories .selected-stories .container .stories-body .contents .con-txt{padding:10px 15px; position:relative;}
+#stories .selected-stories .container .stories-body .contents .con-txt a{text-transform:uppercase; font-weight:bold; color:#333; font-size: 80%;}
+#stories .selected-stories .container .stories-body .contents .con-txt a:hover{text-decoration: none;}
+#stories .selected-stories .container .stories-body .contents .con-txt a span{}
+#stories .selected-stories .container .stories-body .contents .con-txt dl{margin-top:20px;}
+#stories .selected-stories .container .stories-body .contents .con-txt dl dt{padding-bottom: 10px;}
+#stories .selected-stories .container .stories-body .contents .con-txt dl dt a{color:#000; font-size:120%; font-weight: bold; padding:5px 0; border-bottom: 2px solid #9dd9c5; text-decoration: none; }
+#stories .selected-stories .container .stories-body .contents .con-txt dl dd{font-size: 90%; line-height: 100%; padding-bottom: 30px;}
+#stories .selected-stories .container .stories-body .col1{left:50%; top:100px; transform: scale(1); z-index: 1; margin-left:-11%;}
+#stories .selected-stories .container .stories-body .col2{left:10%; top:50px; transform: scale(.9); opacity:.5;}
+#stories .selected-stories .container .stories-body .col3{left:50%; top:10px; transform: scale(.8); opacity:.5; margin-left:-11%;}
+#stories .selected-stories .container .stories-body .col4{left:68%; top:50px; transform: scale(.9); opacity:.5; }
+#stories .selected-stories .container .stories-body .cotent-btn>a{position:absolute; color:#333; text-transform: uppercase; font-weight: bold;}
+#stories .selected-stories .container .stories-body .cotent-btn .prev{top:40%; left:0; }
+#stories .selected-stories .container .stories-body .cotent-btn .next{top:40%; right:0;}

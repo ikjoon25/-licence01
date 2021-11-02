@@ -1,0 +1,56 @@
+@charset "utf-8";
+*{margin:0; padding:0;}
+li{list-style: none;}
+a{text-decoration: none; color:#fff;}
+body{color:#fff;}
+#mainHeader{
+    width:960px;
+    height:200px;
+    background-color: red;
+    position:relative;
+    margin:0 auto;
+}
+#mainHeader .title{}
+#mainHeader .title .heading{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+#mainHeader .title .heading h1{}
+#mainHeader .gnb{
+    position:absolute;
+    top:0;
+    right:0;
+}
+#mainHeader .gnb ul{overflow:hidden;}
+#mainHeader .gnb ul li{
+    float:left;
+}
+#mainHeader .gnb ul li a{
+    display:block;
+    padding:5px 10px;
+    /* 인라인요소이기때문에 블럭요소로 만들었음  */
+}
+#mainHeader .gnb ul li a:hover{
+    background-color: black;
+}
+#mainHeader .gnb ul li a strong{}
+#mainHeader .gnb ul li a img{}
+#mainHeader .nav{}
+#mainHeader .nav ul{
+    position:relative;
+    top:140px;
+    left:50%;
+    float:left;
+    /* 플롯을 시켜버리면 안에 글자의 량만큼 줄어버림 */
+}
+#mainHeader .nav ul li{
+    position:relative;
+    float:left;
+    left:-50%;
+}
+#mainHeader .nav ul li a{
+    display:block;
+    padding:0 40px;
+}

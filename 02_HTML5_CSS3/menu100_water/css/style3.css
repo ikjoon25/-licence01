@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+
+/* 레이아웃 */
+#wrap{
+    width: 100%
+}
+#header{
+    width: 100%;
+    height: 105px;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#content{width: 100%;}
+#content img{display: block; margin: 0 auto;}
+
+/* 메뉴 */
+.menu{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    background: rgba(255,255,255,.8);
+    position: relative;
+}
+.menu .gnb{
+    width: 1280px;
+    margin: 0 auto;
+}
+.menu .gnb>a{
+    display: block;
+    padding-top: 20px;
+    float: left;
+}
+.menu .gnb .nav{
+    float: right;
+}
+.menu .gnb .nav .bg_blue{
+    position: absolute;
+    top: 105px;
+    left:0;
+    width: 100%;
+    height: 0;
+    background: #0b8dda;
+    opacity: .9;
+    z-index: 1;
+    transition: height 0.5s; 
+}
+/* 포지션 엡소루트 부모는 메뉴다 왜why 넓이 100%를 가져야하기 떄문이다. */
+.menu .gnb .nav:hover .bg_blue{
+    height: 220px
+}
+.menu .gnb .nav .bg_menu{
+    width:900px;
+    height: 105px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    transition: height .5s;
+}
+.menu .gnb .nav:hover .bg_menu{
+    height: 325px
+}
+.menu .gnb .nav .bg_menu>ul>li{
+    float: left;
+    width: 20%;
+    text-align: center;
+    line-height: 105px;
+}
+.menu .gnb .nav .bg_menu>ul>li>a{
+    display: block;
+    color: #1e1e1e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;;
+}
+.menu .gnb .nav .bg_menu>ul>li.menu01>a{color:rgb(52, 98, 5)}
+.menu .gnb .nav .bg_menu>ul>li.menu02>a{color:rgb(255, 102, 0)}
+.menu .gnb .nav .bg_menu>ul>li.menu03>a{color:rgb(25, 221, 235)}
+.menu .gnb .nav .bg_menu>ul>li.menu04>a{color:rgb(17, 74, 231)}
+.menu .gnb .nav .bg_menu>ul>li.menu05>a{color:rgb(245, 23, 197)}
+.menu .gnb .nav .bg_menu>ul>li:hover>a{color: rgb(41, 37, 37)}
+.menu .gnb .nav .bg_menu>ul>li:hover>ul{
+    height: 250px;
+    padding-bottom: 20px;
+    background-color: rgba(0,86,150,.5);
+}
+.menu .gnb .nav .bg_menu>ul>li>ul>li{
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0 20px;
+    line-height: 24px;
+}
+.menu .gnb .nav .bg_menu>ul>li>ul>li>a{
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px 0;
+}
